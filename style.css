@@ -8,7 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: linear-gradient(rgb(255,255,255), #80838f);
+    background: linear-gradient(rgb(255,255,255), #525e8d);
     color: #080808;
 }
 #header{
@@ -68,7 +68,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color:#1b56f5;
+    color:#1949cf;
 }
 
 /* ----------About Me Page------- */
@@ -219,7 +219,7 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 .buttons:hover{
-    color: #1b56f5;
+    color: #1949cf;
     transform: translateY(-3px);
 }
 
@@ -273,7 +273,7 @@ nav ul li a:hover::after{
     padding-top: 30px;
     padding-bottom: 20px;
     color: #fff;
-    background-color: #5d6067;
+    background-color: #525e8d;
     text-align: center;
 }
 
