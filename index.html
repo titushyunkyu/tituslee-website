@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a024b6bda8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/uva two lines logo.jpg" class="logo">
+            <img src="Images/csp logo.jpg" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-text">
+        <h1>Hi, I'm <span>Titus Lee</span><br> and this is my portfolio website     </h1>
+    </div>
+   </div> 
+
+<!-- ABOUT PAGE -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h2 class="subtitle">About Me</h2>
+                    <p1>I'm a computer science major at the University of Virginia, also pursuing a minor in engineering business. I'm also one of only 17 selected students in Cohort 6 of the A. James Clark Scholars Program at the University of Virginia. My ultimate goal is to become a software engineer after I graduate, although my precise focus within the field remains to be determined. I'm excited to share my journey, projects, and experiences with you on this website. Thank you for stopping by, and I hope you enjoy learning more about me and my work.</p1>
+                    <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class = "tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class = "tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab", id="skills">
+                        <ul>
+                            <li><span>Programming:</span><br>&emsp;&nbsp;Python, Java</li>
+                            <li><span>Web-development:</span><br>&emsp;&nbsp;HTML, CSS, JavaScript</li>
+                            <li><span>Microsoft Office:</span><br>&emsp;&nbsp;Word, Excel</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents", id="experience">
+                        <ul>
+                            <li><span>Nothing Relevant:</span><br>&emsp;&nbsp;I'm working on it</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents", id="education">
+                        <ul>
+                            <li><span>University of Virginia (August 2023 - Present):</span><br>&emsp;&nbsp;Bachelor of Science in Computer Science, Minor in Engineering Business</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-col-2">
+                    <img src="Images/clark headshot.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- -------------Portfolio------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Portfolio</h1>
+            <!-- project 1 -->            
+            <div class="row">
+                <div class="portfolio-2-1">
+                    <img src="Images/website portfolio.png">
+                </div>
+                <div class="portfolio-2-2">
+                    <h2><a href="" class="buttons">Project 1: Personal Portfolio Website &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                    <p>This project is my personal, professional portfolio website, which is the very website you are currently on. This website was created using HTML, CSS, and JavaScript. The server is hosted through GitHub, and the domain is registered and bought through Namecheap. </p>
+                </div>
+            </div>
+            <!-- project 2 -->
+            <div class="row">
+                <div class="portfolio-1-1">
+                    <img src="Images/pacman photo.png">
+                </div>
+                <div class="portfolio-1-2">
+                    <h2><a href="" class="buttons">Project 2: Multi-game Application &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                    <p>This project presents various stimulating and entertaining games conveniently consolidated into a single platform. The user is given the freedom to select from a range of options, such as Tic-tac-toe, Sudoku, and Pacman. In the case of Tic-tac-toe, the user has the option of playing with another person or challenging the computer. The program is skillfully crafted in Python utilizing Pygame and Tkinter.</p>
+                </div>
+            </div>
+            <!-- project 3 -->
+            <div class="row">
+                <div class="portfolio-3-1">
+                    <img src="Images/live soccer API.png">
+                </div>
+                <div class="portfolio-3-2">
+                    <h2><a href="" class="buttons">Project 3: Live Sports App &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                    <p>This project is a full-stack live API application for sports score updates. This application is designed to provide real-time scores across various sports, including soccer, basketball, football, and more. The application is built utilizing React on the front end and Django on the back end, ensuring a seamless, responsive user experience. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ---------Contact------------ -->
+    <div id="contact">
+        <div class="container">                    
+            <p><i class="fa-solid fa-envelope"></i> &nbsp;titushyunkyu1@gmail.com </p>
+            <p><i class="fa-solid fa-phone"></i> +1 (703) 909-7009 </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100012169932242" target="_blank"><i class="fa-brands fa-facebook"></i>&nbsp;</a>
+                    <a href="https://www.instagram.com/hyun_kyu.l2/" target="_blank"><i class="fa-brands fa-instagram"></i>&nbsp;</a>
+                    <a href="www.linkedin.com/in/titushyunkyu" target="_blank"><i class="fa-brands fa-linkedin"></i>&nbsp;</a>
+                    <a href="https://github.com/titushyunkyu" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            <p><br>Website made and designed by Titus Lee</p>
+        </div>
+    </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
