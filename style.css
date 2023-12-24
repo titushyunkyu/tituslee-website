@@ -75,7 +75,7 @@ nav ul li a:hover::after{
 
 .btn{
     display: block;
-    margin: 50px 13%;
+    margin: 50px 12%;
     width: fit-content;
     border: 1px solid;
     padding: 20px 45px;
@@ -142,7 +142,7 @@ nav ul li a:hover::after{
     font-size: 60px;
     font-weight: 600;
     color: #011440;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .about-col-2{
@@ -240,7 +240,7 @@ nav ul li a:hover::after{
 .portfolio-1-2{
     flex-basis: 60%;
     margin-top: 100px;
-    border-bottom: 2px solid #939393;
+    border-bottom: 2px solid #ccc;
 }
 .portfolio-1-2 h2{
     font-size: 40px;
@@ -334,4 +334,142 @@ nav ul li a:hover::after{
 
 .social-icons{
     padding-top: 10px;
+}
+
+/* --------------CSS for small screen---------- */
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    /* ---Header--- */
+    .header-text{
+        margin-top: 90%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 20px;
+    }
+    .logo{
+        width: 35%;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    .btn{
+        font-size: 12px;
+        padding: 10px 20px;
+        margin: 25px 12%;
+    }
+    nav ul{
+        background: #444bf7;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        padding-top: 60px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 23px;
+    }
+    nav ul li a{
+        color: #fff;
+        font-size: 15px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        color: #fff;
+    }
+    /* ---About Me--- */
+    #about{
+        padding: 0px;
+        margin: 0px;
+        border-radius: 0px;
+        border: 1px solid;
+    }
+    .subtitle{
+        font-size: 35px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-top: 20px;
+    }
+    .about-col-1 p1{
+        padding-right: 10px;
+        font-size: 15px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .tab-titles{
+        margin: 10px 0 25px;
+    }
+    .tab-contents ul li{
+        font-size: 14px;
+    }
+    .about-col-2{
+        margin-top: 15px;
+    }
+    /* ---Portfolio--- */
+    #portfolio{
+        padding: 30px 0;
+    }
+    .container h1{
+        font-size: 45px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2{
+        flex-basis: 100%;
+        margin-top: 10px;
+    }
+    .row a{
+        font-size: 15px;
+        color: #011440;
+    }
+    .row p{
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+    .tab-titles{
+        margin-bottom: -35px;
+    }
+    .portfolio-1-1 img{
+        margin-top: 50px;
+    }
+    .portfolio-3-1 img{
+        margin-top: 50px;
+    }
+    /* ---Contact--- */
+    #contact{
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+    .contact-info p{
+        font-size: 12px;
+    }
+    .contact-info p span{
+        font-size:1px;
+    }
+    .social-icons a{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .btn2{
+        padding: 20px;
+        font-size:15px;
+        z-index: 2;
+    }
 }
