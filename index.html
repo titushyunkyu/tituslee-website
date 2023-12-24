@@ -14,19 +14,21 @@
         <nav>
             <img src="uva two lines logo.png" class="logo">
             <img src="csp logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
     <div class="header-text">
-        <h1>Hi, I'm <span>Titus Lee</span><br> and this is my portfolio website     </h1>
+        <h1>Hi, I'm <span>Titus Lee</span><br> and this is my portfolio website</h1>
+        <a href="Titus Lee Resume.pdf" download class = "btn">Download Resume</a>
+        <a href="#header" class = "btn btn2"><i class="fa-solid fa-chevron-up"></i></a>    
     </div>
-    <a href="Titus Lee Resume.pdf" download class = "btn">Download Resume</a>
-    <a href="#header" class = "btn btn2"><i class="fa-solid fa-chevron-up"></i></a>
    </div> 
 
 <!-- ABOUT PAGE -->
@@ -105,16 +107,18 @@
 
 <!-- ---------Contact------------ -->
     <div id="contact">
-        <div class="container">                    
-            <p><i class="fa-solid fa-envelope"></i> &nbsp;titushyunkyu1@gmail.com </p>
-            <p><i class="fa-solid fa-phone"></i> +1 (703) 909-7009 </p>
+        <div class="container">
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope"></i> &nbsp;titushyunkyu1@gmail.com </p>
+                <p><i class="fa-solid fa-phone"></i> +1 (703) 909-7009 </p>                               
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=100012169932242" target="_blank"><i class="fa-brands fa-facebook"></i>&nbsp;</a>
                     <a href="https://www.instagram.com/hyun_kyu.l2/" target="_blank"><i class="fa-brands fa-instagram"></i>&nbsp;</a>
                     <a href="www.linkedin.com/in/titushyunkyu" target="_blank"><i class="fa-brands fa-linkedin"></i>&nbsp;</a>
                     <a href="https://github.com/titushyunkyu" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
-            <p><br>Website made and designed by Titus Lee</p>
+                <p><span><br></span>Website made and designed by Titus Lee</p>
+            </div>
         </div>
     </div>
 
@@ -132,6 +136,19 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
     }
 
 </script>
