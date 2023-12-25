@@ -331,6 +331,7 @@ nav ul li a:hover::after{
 
 .container p{
     font-size: 18px;
+    margin-top: 10px;
 }
 
 .social-icons a{
