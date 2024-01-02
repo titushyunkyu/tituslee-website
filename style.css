@@ -298,6 +298,10 @@ nav ul li a:hover::after{
 }
 
 /* portfolio project 3 */
+.row-notyet{
+    display: none
+}
+
 .portfolio-3-1{
     flex-basis: 32%;
 }
