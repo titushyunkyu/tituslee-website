@@ -132,7 +132,6 @@
             </div>
         </div>
     </div>
-
 <!-- ---------Contact------------ -->
     <div id="contact">
         <div class="container">
@@ -179,6 +178,24 @@
         sidemenu.style.right = "-200px";
     }
 
+</script>
+
+<script>
+    document.addEventListener('scroll', function() {
+        var scrollPosition = window.pageYOffset;
+        var fadeStart = 100; // Start fading in after 100px of scrolling
+        var fadeUntil = 800; // Finish fading in at 500px of scrolling
+        var fadeElement = document.body.style;
+    
+        if(scrollPosition <= fadeStart) {
+            fadeElement.setProperty('--fade-opacity', 0);
+        } else if(scrollPosition <= fadeUntil) {
+            var opacity = (scrollPosition - fadeStart) / (fadeUntil - fadeStart);
+            fadeElement.setProperty('--fade-opacity', opacity);
+        } else {
+            fadeElement.setProperty('--fade-opacity', 1);
+        }
+    });
 </script>
 
 </body>
