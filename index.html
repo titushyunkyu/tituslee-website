@@ -113,7 +113,7 @@
                 </div>
                 <div class="portfolio-4-2">
                     <h2><a href="https://github.com/titushyunkyu/task-manager-app" target="_blank" class="buttons">Project 4: Task Manager App &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                    <p>This project is a web-browser task manager application written in HTML, CSS, and JavaScript. It contains a basic model of a to-do list categorized by different classes, a Pomodoro timer, and essential date, time, and weather information. More information on the functionalities of the web application can be found on the GitHub page linked above. 
+                    <p>This project is a web-browser task manager application written in HTML, CSS, and JavaScript. It contains a basic model of a to-do list categorized by different classes, a Pomodoro timer, and essential date, time, and weather information, as well as a study playlist. More information on the functionalities of the web application can be found on the GitHub page linked above. 
                         <br><br> The web-application can be accessed <a href="https://titushyunkyu.github.io/task-manager-app/" target="_blank" class="buttons" id="task-manager-link">here</a>. </p>
                 </div>
             </div>
@@ -183,8 +183,8 @@
 <script>
     document.addEventListener('scroll', function() {
         var scrollPosition = window.pageYOffset;
-        var fadeStart = 100; 
-        var fadeUntil = 800; 
+        var fadeStart = 100; // Start fading in after 100px of scrolling
+        var fadeUntil = 800; // Finish fading in at 500px of scrolling
         var fadeElement = document.body.style;
     
         if(scrollPosition <= fadeStart) {
