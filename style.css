@@ -515,10 +515,18 @@ nav .fa-solid{
         margin-bottom: -35px;
     }
     .portfolio-1-1 img{
-        margin-top: 50px;
+        margin-top: 10px;
+        height: 23vh;
     }
     .portfolio-3-1 img{
-        margin-top: 50px;
+        margin-top: 10px;
+        height: 23vh;
+    }
+    .portfolio-2-1 img{
+        margin-top: 10px;
+    }
+    .portfolio-4-1 img{
+        margin-top: 10px;
     }
     /* ---Contact--- */
     #contact{
