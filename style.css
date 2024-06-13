@@ -140,7 +140,7 @@ nav ul li a:hover::after{
     padding: 20px; 
     margin: 80px 80px;
     border-radius: 20px;
-    background-color: #f1f2fb;
+    background-color: rgba(241, 242, 251, 0.85);
 }
 
 .row{
@@ -234,12 +234,13 @@ nav ul li a:hover::after{
     padding: 30px; 
     margin: 0px 80px;
     border-radius: 20px;
-    background-color: #f1f2fb;
+    background-color: rgba(241, 242, 251, 0.85);
 }
 
 #portfolio .portfolio-container{
     padding: 80px 10%;
     padding: 10px 40px;
+    opacity: 1;
 }
 
 .container h1{
