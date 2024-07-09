@@ -10,4 +10,4 @@ This project is my personal, professional portfolio website. This website was cr
   * The HTML code itself contains a third portfolio project section that is currently set to be hidden within the website since the project is still under work and will be shown with a hyperlink to the code once the project is finished.
   * DISCLAIMER - Honestly, I just put all of my personal information out there since I didn't know how else I would make a website private and only be shown to a select few, but just please don't steal or do anything with my personal information. Thank you :)
 
-<img src="https://titushyunkyu.com/website%20portfolio.png" alt = "Website Image">
+<img src="https://titushyunkyu.com/images/website%20portfolio.png" alt = "Website Image">
