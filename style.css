@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 html{
@@ -9,8 +8,12 @@ html{
 }
 body {
     position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     z-index: 1;
 }
+
 
 body::before {
     content: '';
@@ -306,6 +309,7 @@ nav ul li a:hover::after{
 .portfolio-2-1 img{
     width:100%;
     border-radius: 15px;
+    height: 16vw;
     border: solid 2px;
     border-color:#011440;
     position: relative
@@ -357,6 +361,7 @@ nav ul li a:hover::after{
 .portfolio-4-1 img{
     width:100%;
     border-radius: 15px;
+    height: 16vw;
     border: solid 2px;
     border-color:#011440;
     position: relative
@@ -375,18 +380,19 @@ nav ul li a:hover::after{
 /* portfolio project 5 */
 .portfolio-5-1{
     flex-basis: 32%;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 .portfolio-5-1 img{
     width:100%;
     border-radius: 15px;
+    height: 16vw;
     border: solid 2px;
     border-color:#011440;
     position: relative
 }
 .portfolio-5-2{
     flex-basis: 60%;
-    margin-top: 30px;
+    margin-top: 100px;
     padding-bottom: 20px;
     border-bottom: 2px solid #ccc;
 }
@@ -394,6 +400,33 @@ nav ul li a:hover::after{
     font-size: 40px;
     font-weight: 600;
 }
+
+
+/* portfolio project 6 */
+.portfolio-6-1{
+    flex-basis: 32%;
+    margin-top: 30px;
+}
+.portfolio-6-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    border-color:#011440;
+    position: relative
+}
+.portfolio-6-2{
+    flex-basis: 60%;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+}
+.portfolio-6-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* ---------Contact------------ */
 
 #contact{
     padding-top: 20px;
@@ -522,7 +555,7 @@ nav .fa-solid{
         margin-top: 30px;
         margin-bottom: 50px;
     }
-    .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2{
+    .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2{
         flex-basis: 100%;
         margin-top: 10px;
     }
@@ -549,6 +582,12 @@ nav .fa-solid{
         margin-top: 10px;
     }
     .portfolio-4-1 img{
+        margin-top: 10px;
+    }
+    .portfolio-5-1 img{
+        margin-top: 10px;
+    }
+    .portfolio-6-1 img{
         margin-top: 10px;
     }
     /* ---Contact--- */
