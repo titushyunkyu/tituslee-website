@@ -1,13 +1,59 @@
-# Personal Portfolio Website
+# Titus Lee's Personal Portfolio Website
 
-## Titus Lee's personal, professional portfolio website coded with HTML, CSS, and JavaScript
+Welcome to the repository for [Titus Hyunkyu Lee's personal portfolio website](https://titushyunkyu.com), hosted on GitHub Pages. This website showcases my background, projects, and professional experience as an Electrical and Computer Engineering student at the University of Virginia.
 
-This project is my personal, professional portfolio website. This website was created using HTML, CSS, and JavaScript. The server is hosted through GitHub, and the domain is registered and bought through Namecheap. The website is designed to display my resume, projects, contact information, and information about me.
+## Overview
 
-  * All the images and links within the website are provided within this GitHub webpage.
-  * The main running file is the index.html file, which is directly linked with the style.css file. The JavaScript programming code is implemented within the HTML code without creating a separate file.
-  * At the bottom of the style.css file, there is a separate section of CSS code written distinctively for the website layout on mobile devices (devices with a screen width of less than 600 pixels).
-  * The HTML code itself contains a third portfolio project section that is currently set to be hidden within the website since the project is still under work and will be shown with a hyperlink to the code once the project is finished.
-  * DISCLAIMER - Honestly, I just put all of my personal information out there since I didn't know how else I would make a website private and only be shown to a select few, but just please don't steal or do anything with my personal information. Thank you :)
+This portfolio is designed to give visitors an insight into my academic journey, professional skills, and key projects. It serves as a personal brand website, highlighting the following:
 
-<img src="https://titushyunkyu.com/images/website%20portfolio.png" alt = "Website Image">
+- **About Me**: A brief introduction to who I am, including my academic focus and career goals.
+- **Projects**: Descriptions of personal and academic projects I've worked on, including:
+  - EPL Match Predictor using a Random Forest Classifier
+  - Wordle Solver leveraging information theory
+  - AI Tic-Tac-Toe Application using Monte Carlo Tree Search
+  - Task Manager Web Application for productivity
+- **Experience**: A detailed look at my work experience, leadership roles, and volunteer contributions.
+- **Contact Information**: Details on how to get in touch with me for professional inquiries.
+
+## Features
+
+- **Responsive Design**: The website is optimized for viewing across devices of various sizes, ensuring a seamless experience for desktop, tablet, and mobile users.
+- **Project Highlights**: Each project section includes technical descriptions, challenges faced, and key outcomes to provide a deeper understanding of my capabilities.
+
+## Tech Stack
+
+- **HTML5/CSS3**: For building the structure and styling the website.
+- **JavaScript**: Adding interactivity to elements, such as dynamic content updates.
+- **GitHub Pages**: Hosting the website.
+
+## How to Use
+
+You can view the website live at [titushyunkyu.com](https://titushyunkyu.com). The repository is public, so feel free to fork or clone it if you are interested in using or learning from its structure.
+
+### Setup Instructions
+
+To run the website locally:
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/titushyunkyu/tituslee-website.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd tituslee-website
+   ```
+3. Open `index.html` in your browser to view the website locally.
+
+## Future Improvements
+
+- Expand the projects section with additional portfolio pieces.
+- Add a blog to share insights on topics related to electrical and computer engineering.
+- Implement a dark mode for enhanced user experience.
+
+## Contact
+
+Feel free to reach out if you have any questions or feedback!
+
+- **Email**: [hvm4sg@virginia.edu](mailto:hvm4sg@virginia.edu)
+- **LinkedIn**: [linkedin.com/in/titushyunkyu](https://linkedin.com/in/titushyunkyu)
+
