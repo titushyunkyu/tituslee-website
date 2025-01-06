@@ -231,6 +231,7 @@ nav ul li a:hover::after{
 /* ---------Portfolio------------ */
 
 #portfolio{
+    display:none;
     padding:80px 20px;
     color: #011440;
     border: 2px solid #939393;
