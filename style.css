@@ -1,6 +1,6 @@
 :root {
     --primary-color: #e68c3a; /* Main accent color (orange) */
-    --secondary-color: #213e60; /* Background color (blue) */
+    --secondary-color: rgba(33, 62, 96, 0.9); /* Background color (blue) */
     --text-color: #f4f2ef; /* Light text color (off-white) */
     --link-hover-color: #94b6ef; /* Link hover color (light blue) */
     --border-color: #e68c3a; /* Border color (same as primary) */
