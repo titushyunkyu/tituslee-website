@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #e68c3a; /* Main accent color (orange) */
+    --secondary-color: #213e60; /* Background color (blue) */
+    --text-color: #f4f2ef; /* Light text color (off-white) */
+    --link-hover-color: #94b6ef; /* Link hover color (light blue) */
+    --border-color: #e68c3a; /* Border color (same as primary) */
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -32,6 +41,13 @@ body::before {
     width: 100%;
     height: 100vh;
 }
+ 
+.portfolio-page #header{
+    height: 150px;
+}
+
+
+
 .container{
     padding: 10px 5%;
 }
@@ -73,7 +89,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: #444bf7;
+    background: var(--primary-color);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -94,7 +110,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color:#444bf7;
+    color:var(--primary-color);
 }
 
 .btn{
@@ -105,8 +121,8 @@ nav ul li a:hover::after{
     padding: 20px 45px;
     border-radius: 40px;
     text-decoration: none;
-    color: #fff;
-    background-color: #444bf7;
+    color: var(--text-color);
+    background-color: var(--primary-color);
     font-weight: 600;
     font-size: 18px;
     transition: transform 0.4s;
@@ -120,30 +136,30 @@ nav ul li a:hover::after{
     right: -8%;
     border-radius: 150px;
     font-size: 30px;
-    color: #444bf7;
-    background-color: #f2f2f8;
+    color: var(--primary-color);
+    background-color: var(--text-color);
     transition: transform 0.4s;
 }
 .btn:hover{
-    background: #2f34b9;
+    background: var(--primary-color);
     transform: translateY(-5px);
 }
 
 .btn.btn2:hover{
-    background: #444bf7;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--text-color);
     transform: translateY(-5px);
 }
 
 /* ----------About Me Page------- */
 #about{
     padding:80px 20px;
-    color: #011440;
-    border: 2px solid #939393;
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
     padding: 20px; 
     margin: 80px 80px;
     border-radius: 20px;
-    background-color: rgba(241, 242, 251, 0.85);
+    background-color: var(--secondary-color);
 }
 
 .row{
@@ -165,7 +181,7 @@ nav ul li a:hover::after{
 .subtitle{
     font-size: 60px;
     font-weight: 600;
-    color: #011440;
+    color: var(--primary-color);
     margin-bottom: 10px;
     margin-top: 5%;
 }
@@ -198,7 +214,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background:#444bf7;
+    background:var(--link-hover-color);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -216,7 +232,7 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #444bf7;
+    color: var(--link-hover-color);
     font-style:normal;
 }
 
@@ -230,14 +246,32 @@ nav ul li a:hover::after{
 
 /* ---------Portfolio------------ */
 
+/* Remove blank space for portfolio page only */
+.portfolio-page #header {
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-page #portfolio {
+    margin-top: 0;
+    padding-top: 20px; /* Adjust padding if needed */
+}
+
+.portfolio-page .header-text {
+    display: none; /* Removes the large header text section */
+}
+
+
 #portfolio{
     padding:80px 20px;
-    color: #011440;
-    border: 2px solid #939393;
+    color: var(--text-color);
+    border: 2px solid var(--primary-color);
     padding: 30px; 
     margin: 0px 80px;
     border-radius: 20px;
-    background-color: rgba(241, 242, 251, 0.85);
+    background-color: var(--secondary-color);
+    margin-top: 0; /* Ensure no gap at the top */
+    padding-top: 20px; /* Adjust padding as necessary */
 }
 
 #portfolio .portfolio-container{
@@ -268,13 +302,13 @@ nav ul li a:hover::after{
     border-radius: 15px;
     margin-top: 100px;
     border: solid 2px;
-    border-color:#011440;
+    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-1-2{
     flex-basis: 60%;
     margin-top: 100px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--text-color);
 }
 .portfolio-1-2 h2{
     font-size: 40px;
@@ -292,12 +326,12 @@ nav ul li a:hover::after{
     font-size:40px;
     font-weight:600;
     margin-bottom:5px;
-    color: #011440;
+    color: var(--primary-color);
     display: inline-block;
     transition: 0.4s;
 }
 .buttons:hover{
-    color: #444bf7;
+    color: var(--primary-color);
     transform: translateY(-3px);
 }
 
@@ -311,13 +345,13 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:#011440;
+    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-2-2{
     flex-basis: 60%;
     margin-top: 100px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--text-color);
 }
 .portfolio-2-2 h2{
     font-size: 40px;
@@ -338,14 +372,14 @@ nav ul li a:hover::after{
     border-radius: 15px;
     margin-top: 100px;
     border: solid 2px;
-    border-color:#011440;
+    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-3-2{
     flex-basis:60%;
     margin-top: 100px;
     margin-bottom: 5px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--text-color);
 }
 .portfolio-3-2 h2{
     font-size: 40px;
@@ -363,14 +397,14 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:#011440;
+    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-4-2{
     flex-basis: 60%;
     margin-top: 100px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--text-color);
 }
 .portfolio-4-2 h2{
     font-size: 40px;
@@ -387,14 +421,14 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:#011440;
+    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-5-2{
     flex-basis: 60%;
     margin-top: 100px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--text-color);
 }
 .portfolio-5-2 h2{
     font-size: 40px;
@@ -412,16 +446,64 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:#011440;
+    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-6-2{
     flex-basis: 60%;
     margin-top: 30px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--text-color);
 }
 .portfolio-6-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* portfolio project 7 */
+.portfolio-7-1{
+    flex-basis: 32%;
+    margin-top: 30px;
+}
+.portfolio-7-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    border-color:var(--primary-color);
+    position: relative
+}
+.portfolio-7-2{
+    flex-basis: 60%;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--text-color);
+}
+.portfolio-7-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* portfolio project 7 */
+.portfolio-8-1{
+    flex-basis: 32%;
+    margin-top: 30px;
+}
+.portfolio-8-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    border-color:var(--primary-color);
+    position: relative
+}
+.portfolio-8-2{
+    flex-basis: 60%;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--text-color);
+}
+.portfolio-8-2 h2{
     font-size: 40px;
     font-weight: 600;
 }
@@ -432,7 +514,7 @@ nav ul li a:hover::after{
     padding-top: 20px;
     padding-bottom: 10px;
     color: #fff;
-    background-color: #011440;
+    background-color: var(--secondary-color);
     margin-top: 30px;
     text-align: center;
 }
@@ -445,7 +527,7 @@ nav ul li a:hover::after{
 .social-icons a{
     text-decoration: none;
     font-size: 20px;
-    color: #fff;
+    color: var(--text-color);
     display: inline-block;
     transition: transform 0.5s;
 }
@@ -475,6 +557,9 @@ nav .fa-solid{
     .logo{
         width: 35%;
     }
+    .portfolio-page #header{
+        height: 100px;
+    }
 
     nav .fa-solid{
         display: block;
@@ -486,7 +571,7 @@ nav .fa-solid{
         margin: 25px 12%;
     }
     nav ul{
-        background: #444bf7;
+        background: var(--primary-color);
         position: fixed;
         top: 0;
         right: -200px;
@@ -501,7 +586,7 @@ nav .fa-solid{
         margin: 23px;
     }
     nav ul li a{
-        color: #fff;
+        color: var(--text-color);
         font-size: 15px;
     }
     nav ul .fa-solid{
@@ -509,7 +594,7 @@ nav .fa-solid{
         top: 25px;
         left: 25px;
         cursor: pointer;
-        color: #fff;
+        color: var(--text-color);
     }
     /* ---About Me--- */
     #about{
@@ -551,17 +636,17 @@ nav .fa-solid{
         margin-top: 50px;
     }
     .container h1{
-        font-size: 45px;
+        font-size: 34px;
         margin-top: 30px;
         margin-bottom: 50px;
     }
-    .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2{
+    .portfolio-8-1, .portfolio-8-2, .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2, .portfolio-7-1, .portfolio-7-2{
         flex-basis: 100%;
         margin-top: 10px;
     }
     .row a{
-        font-size: 15px;
-        color: #011440;
+        font-size: 18px;
+        color: var(--primary-color);
     }
     .row p{
         font-size: 14px;
@@ -591,6 +676,14 @@ nav .fa-solid{
         height: 23vh;
     }
     .portfolio-6-1 img{
+        margin-top: 10px;
+        height: 21vh;
+    }
+    .portfolio-7-1 img{
+        margin-top: 10px;
+        height: 21vh;
+    }
+    .portfolio-8-1 img{
         margin-top: 10px;
         height: 21vh;
     }
