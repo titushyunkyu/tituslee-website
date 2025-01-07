@@ -289,6 +289,7 @@ nav ul li a:hover::after{
     margin-top: 5px;
     font-size: 22px;
     line-height: 150%;
+    margin-bottom: 18px;
 }
 
 
@@ -703,7 +704,8 @@ nav .fa-solid{
         letter-spacing: 1px;
     }
     .btn2{
-        padding: 20px;
+        border-radius: 100px;
+        padding: 20px 23px;
         font-size:15px;
         z-index: 2;
     }
