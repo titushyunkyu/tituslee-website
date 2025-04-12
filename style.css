@@ -1,9 +1,10 @@
 :root {
-    --primary-color: #e68c3a; /* Main accent color (orange) */
-    --secondary-color: rgba(33, 62, 96, 0.9); /* Background color (blue) */
-    --text-color: #f4f2ef; /* Light text color (off-white) */
-    --link-hover-color: #94b6ef; /* Link hover color (light blue) */
-    --border-color: #e68c3a; /* Border color (same as primary) */
+    --primary-color: #327ed4; /* main accents */
+    --secondary-color: #161B22; /* Background color (blue) */
+    --text-color: #969ba1; /* Light text color (off-white) */
+    --primary-text-color: #F0F6FC;
+    --link-hover-color: #0F172A; /* Link hover color (light blue) */
+    --border-color: #1e3a51; /* Border color (same as primary) */
 }
 
 
@@ -31,10 +32,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('images/background.jpg') no-repeat center top / cover;
+    /*background: url('images/background.jpg') no-repeat center top / cover;*/
+    background-color: #0a151d;
     z-index: -1;
-    opacity: var(--fade-opacity, 0); /* Use the --fade-opacity custom property */
-    transition: opacity 1s ease;
+    /*opacity: var(--fade-opacity, 0); /* Use the --fade-opacity custom property
+    transition: opacity 1s ease;*/
 }
 
 #header{
@@ -67,8 +69,11 @@ nav{
 .logo{
     width: 15%;
 }
+.logo1{
+    width: 30%;
+}
 #header .container-logo{
-    padding: 10px 10%;
+    padding: 0px 10%;
 }
 
 nav ul li{
@@ -78,7 +83,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #303030eb;
+    color: var(--primary-text-color);
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -107,6 +112,7 @@ nav ul li a:hover::after{
     margin-left: 12%;
     font-size: 70px;
     line-height: 120%;
+    color: var(--primary-text-color);
 }
 
 .header-text h1 span{
@@ -121,8 +127,9 @@ nav ul li a:hover::after{
     padding: 20px 45px;
     border-radius: 40px;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--primary-text-color);
     background-color: var(--primary-color);
+    border-color: var(--primary-color);
     font-weight: 600;
     font-size: 18px;
     transition: transform 0.4s;
@@ -137,7 +144,7 @@ nav ul li a:hover::after{
     border-radius: 150px;
     font-size: 30px;
     color: var(--primary-color);
-    background-color: var(--text-color);
+    background-color: var(--secondary-color);
     transition: transform 0.4s;
 }
 .btn:hover{
@@ -147,7 +154,7 @@ nav ul li a:hover::after{
 
 .btn.btn2:hover{
     background: var(--primary-color);
-    color: var(--text-color);
+    color: var(--primary-text-color);
     transform: translateY(-5px);
 }
 
@@ -155,7 +162,7 @@ nav ul li a:hover::after{
 #about{
     padding:80px 20px;
     color: var(--text-color);
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--border-color);
     padding: 20px; 
     margin: 80px 80px;
     border-radius: 20px;
@@ -176,6 +183,10 @@ nav ul li a:hover::after{
     padding: 20px 0px;
     font-size: 18px;
     line-height: 145%;
+}
+
+.tab-titles{
+    padding-top: 15px;
 }
 
 .subtitle{
@@ -199,7 +210,8 @@ nav ul li a:hover::after{
 
 .tab-titles{
     display: flex;
-    margin: 10px 0 40px;
+    margin: 10px 0 10px;
+    color: var(--primary-text-color)
 }
 
 .tab-links{
@@ -232,7 +244,7 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: var(--link-hover-color);
+    color: var(--primary-color);
     font-style:normal;
 }
 
@@ -275,51 +287,36 @@ nav ul li a:hover::after{
 }
 
 #portfolio .portfolio-container{
-    padding: 80px 10%;
-    padding: 10px 40px;
+    padding: 5px 40px;
     opacity: 1;
 }
+
 
 .container h1{
     font-size: 60px;
     margin-top: 50px;;
 }
 
+#portfolio a{
+    color: var(--primary-text-color);
+    padding-bottom: 10px;
+    font-size: 33px;
+}
+
 .container p{
     margin-top: 5px;
     font-size: 22px;
     line-height: 150%;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
-
-/* portfolio project 1 */
-.portfolio-1-1{
-    flex-basis: 32%;
-}
-.portfolio-1-1 img{
-    width: 100%;
-    height: 16vw;
-    border-radius: 15px;
-    margin-top: 100px;
-    border: solid 2px;
-    border-color:var(--primary-color);
-    position: relative
-}
-.portfolio-1-2{
-    flex-basis: 60%;
-    margin-top: 100px;
-    border-bottom: 2px solid var(--text-color);
-}
-.portfolio-1-2 h2{
-    font-size: 40px;
-    font-weight: 600;
-    margin-bottom: 5px;
+.button1{
+    font-size: 20px;
 }
 
 #task-manager-link{
-    font-size: 110%;
-    font-weight: 600;
+    font-weight: 10;
+    font-size: 1px;
 }
 
 .buttons{
@@ -336,23 +333,48 @@ nav ul li a:hover::after{
     transform: translateY(-3px);
 }
 
+
+/* portfolio project 1 */
+.portfolio-1-1{
+    flex-basis: 32%;
+    margin-top: 50px;
+}
+.portfolio-1-1 img{
+    width: 100%;
+    height: 16vw;
+    border-radius: 15px;
+    border: solid 2px;
+    position: relative
+}
+.portfolio-1-2{
+    flex-basis: 60%;
+    margin-top: 50px;
+    border-bottom: 2px solid var(--primary-color);
+}
+.portfolio-1-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
 /* portfolio project 2 */
 .portfolio-2-1{
     flex-basis: 32%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .portfolio-2-1 img{
     width:100%;
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-2-2{
     flex-basis: 60%;
-    margin-top: 100px;
-    border-bottom: 2px solid var(--text-color);
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
 }
 .portfolio-2-2 h2{
     font-size: 40px;
@@ -366,46 +388,43 @@ nav ul li a:hover::after{
 
 .portfolio-3-1{
     flex-basis: 32%;
+    margin-top: 50px;
 }
 .portfolio-3-1 img{
     width:100%;
     height: 16vw;
     border-radius: 15px;
-    margin-top: 100px;
     border: solid 2px;
-    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-3-2{
-    flex-basis:60%;
-    margin-top: 100px;
-    margin-bottom: 5px;
-    border-bottom: 2px solid var(--text-color);
+    flex-basis: 60%;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
 }
 .portfolio-3-2 h2{
     font-size: 40px;
     font-weight: 600;
-    margin-bottom: 5px;
 }
 
 /* portfolio project 4 */
 .portfolio-4-1{
     flex-basis: 32%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .portfolio-4-1 img{
     width:100%;
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-4-2{
     flex-basis: 60%;
-    margin-top: 100px;
+    margin-top: 50px;
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 .portfolio-4-2 h2{
     font-size: 40px;
@@ -415,21 +434,20 @@ nav ul li a:hover::after{
 /* portfolio project 5 */
 .portfolio-5-1{
     flex-basis: 32%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .portfolio-5-1 img{
     width:100%;
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-5-2{
     flex-basis: 60%;
-    margin-top: 100px;
+    margin-top: 50px;
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 .portfolio-5-2 h2{
     font-size: 40px;
@@ -440,21 +458,20 @@ nav ul li a:hover::after{
 /* portfolio project 6 */
 .portfolio-6-1{
     flex-basis: 32%;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .portfolio-6-1 img{
     width:100%;
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-6-2{
     flex-basis: 60%;
-    margin-top: 30px;
+    margin-top: 50px;
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 .portfolio-6-2 h2{
     font-size: 40px;
@@ -464,21 +481,20 @@ nav ul li a:hover::after{
 /* portfolio project 7 */
 .portfolio-7-1{
     flex-basis: 32%;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .portfolio-7-1 img{
     width:100%;
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-7-2{
     flex-basis: 60%;
-    margin-top: 30px;
+    margin-top: 50px;
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 .portfolio-7-2 h2{
     font-size: 40px;
@@ -488,21 +504,20 @@ nav ul li a:hover::after{
 /* portfolio project 7 */
 .portfolio-8-1{
     flex-basis: 32%;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .portfolio-8-1 img{
     width:100%;
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    border-color:var(--primary-color);
     position: relative
 }
 .portfolio-8-2{
     flex-basis: 60%;
-    margin-top: 30px;
+    margin-top: 50px;
     padding-bottom: 20px;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--primary-color);
 }
 .portfolio-8-2 h2{
     font-size: 40px;
@@ -512,8 +527,8 @@ nav ul li a:hover::after{
 /* ---------Contact------------ */
 
 #contact{
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     color: #fff;
     background-color: var(--secondary-color);
     margin-top: 30px;
@@ -522,14 +537,15 @@ nav ul li a:hover::after{
 
 .container p{
     font-size: 18px;
-    margin-top: 10px;
+    padding-top: 0px;
 }
 
 .social-icons a{
     text-decoration: none;
     font-size: 20px;
-    color: var(--text-color);
+    color: var(--primary-text-color);
     display: inline-block;
+    padding-bottom: 0px;
     transition: transform 0.5s;
 }
 
@@ -538,15 +554,19 @@ nav ul li a:hover::after{
 }
 
 .social-icons{
-    padding-top: 10px;
+    padding-top: 0px;  
+}
+.end {
+    padding-top: 30px;
 }
 
 /* --------------CSS for small screen---------- */
 nav .fa-solid{
     display: none;
+    color: var(--primary-text-color)
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 900px){
     /* ---Header--- */
     .header-text{
         margin-top: 90%;
@@ -555,8 +575,15 @@ nav .fa-solid{
     .header-text h1{
         font-size: 20px;
     }
+    
     .logo{
-        width: 35%;
+        width: 25%;
+        position: absolute;
+        right: 23%;
+        top: 10px;
+    }
+    .logo1{
+        width: 50%;
     }
     .portfolio-page #header{
         height: 100px;
@@ -587,7 +614,7 @@ nav .fa-solid{
         margin: 23px;
     }
     nav ul li a{
-        color: var(--text-color);
+        color: var(--primary-text-color);
         font-size: 15px;
     }
     nav ul .fa-solid{
@@ -595,7 +622,7 @@ nav .fa-solid{
         top: 25px;
         left: 25px;
         cursor: pointer;
-        color: var(--text-color);
+        color: var(--primary-text-color);
     }
     /* ---About Me--- */
     #about{
@@ -626,15 +653,19 @@ nav .fa-solid{
     }
     .tab-contents ul li{
         font-size: 14px;
+        padding-top: 12px;
     }
     .about-col-2{
-        margin-top: 15px;
+        margin-top: 0px;
     }
     /* ---Portfolio--- */
     #portfolio{
         padding: 30px 0;
         margin: 0px 10px;
         margin-top: 50px;
+    }
+    #portfolio a{
+        font-size: 14px;
     }
     .container h1{
         font-size: 34px;
@@ -643,15 +674,14 @@ nav .fa-solid{
     }
     .portfolio-8-1, .portfolio-8-2, .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2, .portfolio-7-1, .portfolio-7-2{
         flex-basis: 100%;
-        margin-top: 10px;
-    }
-    .row a{
-        font-size: 18px;
-        color: var(--primary-color);
+        margin-top: 15px;
     }
     .row p{
-        font-size: 14px;
-        margin-bottom: 50px;
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+    .button1{
+        font-size: 12px;
     }
     .tab-titles{
         margin-bottom: -35px;
@@ -690,14 +720,15 @@ nav .fa-solid{
     }
     /* ---Contact--- */
     #contact{
-        padding-top: 10px;
-        padding-bottom: 5px;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     .contact-info p{
         font-size: 12px;
     }
     .contact-info p span{
-        font-size:1px;
+        font-size:12px;
+        padding-top: 5px;
     }
     .social-icons a{
         font-size: 18px;
@@ -709,4 +740,5 @@ nav .fa-solid{
         font-size:15px;
         z-index: 2;
     }
+    
 }
