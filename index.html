@@ -26,8 +26,10 @@
         </nav>
     </div>
     <div class="header-text">
-        <h1>Hi, I'm <span>Titus Lee</span><br> and this is my portfolio website</h1>
-        <a href="Titus Lee Resume.pdf" target = 'blank' class = "btn">Download Resume</a>
+        <h1>
+            <span class="typing-line1">Hi, I'm <span class="name">Titus Lee</span></span><br>
+            <span class="typing-line2">and this is my portfolio website.</span>
+          </h1>        <a href="Titus Lee Resume.pdf" target = 'blank' class = "btn">Download Resume</a>
         <a href="#header" class = "btn btn2"><i class="fa-solid fa-chevron-up"></i></a>    
     </div>
    </div> 
@@ -141,6 +143,18 @@
         } else {
             fadeElement.setProperty('--fade-opacity', 1);
         }
+    });
+</script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.querySelector('.typing-line1').classList.add('done');
+      }, 1600);
+  
+      setTimeout(() => {
+        document.querySelector('.typing-line2').classList.add('done');
+      }, 7920);
     });
 </script>
 
