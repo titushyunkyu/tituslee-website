@@ -809,11 +809,10 @@ nav .fa-solid{
     }
     .portfolio-11-1, .portfolio-11-2, .portfolio-10-1, .portfolio-10-2, .portfolio-9-1, .portfolio-9-2,.portfolio-8-1, .portfolio-8-2, .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2, .portfolio-7-1, .portfolio-7-2{
         flex-basis: 100%;
-        margin-top: 15px;
     }
 
     .portfolio-11-2,.portfolio-10-2,.portfolio-9-2,.portfolio-8-2, .portfolio-7-2, .portfolio-6-2, .portfolio-5-2, .portfolio-4-2, .portfolio-3-2, .portfolio-2-2, .portfolio-1-2{
-        padding-top: 0px;
+        margin-top: 0px;
     }
     .row p{
         font-size: 13px;
