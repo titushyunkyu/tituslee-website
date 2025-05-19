@@ -339,6 +339,13 @@ nav ul li a:hover::after{
     opacity: 1;
 }
 
+.portfolio-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+    margin-top: 5%;
+}
 
 .container h1{
     font-size: 60px;
@@ -346,7 +353,7 @@ nav ul li a:hover::after{
 }
 
 #portfolio a{
-    color: var(--primary-text-color);
+    color: var(--primary-color);
     padding-bottom: 10px;
     font-size: 33px;
 }
@@ -549,7 +556,7 @@ nav ul li a:hover::after{
     font-weight: 600;
 }
 
-/* portfolio project 7 */
+/* portfolio project 8 */
 .portfolio-8-1{
     flex-basis: 32%;
     margin-top: 50px;
@@ -568,6 +575,76 @@ nav ul li a:hover::after{
     border-bottom: 2px solid var(--border-color);
 }
 .portfolio-8-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+/* portfolio project 9 */
+.portfolio-9-1{
+    flex-basis: 32%;
+    margin-top: 50px;
+}
+.portfolio-9-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    position: relative
+}
+.portfolio-9-2{
+    flex-basis: 60%;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+.portfolio-9-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* portfolio project 10 */
+.portfolio-10-1{
+    flex-basis: 32%;
+    margin-top: 50px;
+}
+.portfolio-10-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    position: relative
+}
+.portfolio-10-2{
+    flex-basis: 60%;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+.portfolio-10-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* portfolio project 11 */
+.portfolio-11-1{
+    flex-basis: 32%;
+    margin-top: 50px;
+}
+.portfolio-11-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    position: relative
+}
+.portfolio-11-2{
+    flex-basis: 60%;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+.portfolio-11-2 h2{
     font-size: 40px;
     font-weight: 600;
 }
@@ -730,12 +807,12 @@ nav .fa-solid{
         margin-top: 30px;
         margin-bottom: 20px;
     }
-    .portfolio-8-1, .portfolio-8-2, .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2, .portfolio-7-1, .portfolio-7-2{
+    .portfolio-11-1, .portfolio-11-2, .portfolio-10-1, .portfolio-10-2, .portfolio-9-1, .portfolio-9-2,.portfolio-8-1, .portfolio-8-2, .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2, .portfolio-7-1, .portfolio-7-2{
         flex-basis: 100%;
         margin-top: 15px;
     }
 
-    .portfolio-8-2, .portfolio-7-2, .portfolio-6-2, .portfolio-5-2, .portfolio-4-2, .portfolio-3-2, .portfolio-2-2, .portfolio-1-2{
+    .portfolio-11-2,.portfolio-10-2,.portfolio-9-2,.portfolio-8-2, .portfolio-7-2, .portfolio-6-2, .portfolio-5-2, .portfolio-4-2, .portfolio-3-2, .portfolio-2-2, .portfolio-1-2{
         padding-top: 0px;
     }
     .row p{
@@ -777,6 +854,18 @@ nav .fa-solid{
         height: 21vh;
     }
     .portfolio-8-1 img{
+        margin-top: 10px;
+        height: 21vh;
+    }
+    .portfolio-9-1 img{
+        margin-top: 10px;
+        height: 21vh;
+    }
+    .portfolio-10-1 img{
+        margin-top: 10px;
+        height: 21vh;
+    }
+    .portfolio-11-1 img{
         margin-top: 10px;
         height: 21vh;
     }
