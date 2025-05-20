@@ -682,7 +682,7 @@ nav ul li a:hover::after{
     padding-top: 0px;  
 }
 .end {
-    padding-top: 30px;
+    margin-top: 30px;
 }
 
 /* --------------CSS for small screen---------- */
