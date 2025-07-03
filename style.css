@@ -388,6 +388,12 @@ nav ul li a:hover::after{
     transform: translateY(-3px);
 }
 
+body.portfolio-page .tab-titles .tab-links span {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: -10px
+}
+
 
 /* portfolio project 1 */
 .portfolio-1-1{
