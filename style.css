@@ -281,7 +281,8 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 .tab-links.active-link::after{
-    width: 60%;
+    width: 50%;
+    left: 20%;
 }
 
 .tab-contents ul li{
@@ -310,6 +311,14 @@ nav ul li a:hover::after{
 .portfolio-page #header {
     padding: 0;
     margin: 0;
+}
+.tab-links span {
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.tab-links:hover span {
+    transform: translateY(-2px); /* you can adjust this distance */
 }
 
 .portfolio-page #portfolio {
@@ -666,6 +675,31 @@ body.portfolio-page .tab-titles .tab-links span {
     font-weight: 600;
 }
 
+.tab-titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.tab-links {
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+}
+
+.tab-links:not(:last-child) {
+    border-right: 1px solid var(--text-color);
+}
+
+
 /* ---------Contact------------ */
 
 #contact{
@@ -843,6 +877,29 @@ nav .fa-solid{
     }
     .tab-titles{
         margin-bottom: -35px;
+    }
+    .tab-titles {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        width: fit-content;
+    }
+
+    .tab-links {
+        padding: 10px 25px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--primary-text-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+    }
+
+    .tab-links:not(:last-child) {
+        border-right: 1px solid var(--text-color);
     }
     .portfolio-1-1 img{
         margin-top: 10px;
