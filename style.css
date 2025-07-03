@@ -807,6 +807,11 @@ nav .fa-solid{
     .about-col-2{
         margin-top: 0px;
     }
+    body.portfolio-page .tab-titles .tab-links span {
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: -10px
+    }
     /* ---Portfolio--- */
     #portfolio{
         padding: 30px 0;
