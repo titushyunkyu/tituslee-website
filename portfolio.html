@@ -42,135 +42,152 @@
 <div id="portfolio">
     <div class="container portfolio-container">
         <h1 class="portfolio-title">Project Portfolio</h1>
-        <!-- project 11-->
-        <div class="row">
-            <div class="portfolio-11-1">
-                <img src="images/audio-analyzer.jpg">
-            </div>
-            <div class="portfolio-11-2">
-                <h2><a href="images/Audio_Analyzer_Project_Report.pdf" target="_blank" class="buttons">Audio Analyzer Circuit - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project involved designing and building an audio analyzer PCB that lights up LEDs in real time based on audio input. By combining a summing amplifier, high-pass and low-pass filters, peak detectors, and two types of LED drivers (analog and PWM), the system separates audio into treble and bass frequencies. The circuit lights up green LEDs for high-pitched sounds (e.g., snares, guitar solos) and red LEDs for bass (e.g., kicks), providing a real-time visual representation of music. I tested the system with "Seven Nation Army" and verified the response using simulations and physical measurements.</p>
-            </div>
+        <div class="tab-titles">
+            <p class="tab-links active-link" onclick="filterTab('All')"><span>All&nbsp&nbsp</span></p>
+            <p class="tab-links" onclick="filterTab('Software')"><span>Software</span></p>
+            <p class="tab-links" onclick="filterTab('Hardware')"><span>Hardware</span></p>
         </div>
-        <!-- project 10-->
-        <div class="row">
-            <div class="portfolio-10-1">
-                <img src="images/voice-isolation.png">
+            <div class="projects-wrapper">
+                <!-- project 11-->
+                <div class="tab-contents project-card active-tab" data-category="Hardware" data-order="11">
+                    <div class="row">
+                        <div class="portfolio-11-1">
+                            <img src="images/audio-analyzer.jpg">
+                        </div>
+                        <div class="portfolio-11-2">
+                            <h2><a href="images/Audio_Analyzer_Project_Report.pdf" target="_blank" class="buttons">Audio Analyzer Circuit - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project involved designing and building an audio analyzer PCB that lights up LEDs in real time based on audio input. By combining a summing amplifier, high-pass and low-pass filters, peak detectors, and two types of LED drivers (analog and PWM), the system separates audio into treble and bass frequencies. The circuit lights up green LEDs for high-pitched sounds (e.g., snares, guitar solos) and red LEDs for bass (e.g., kicks), providing a real-time visual representation of music. I tested the system with "Seven Nation Army" and verified the response using simulations and physical measurements.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 10-->
+                <div class="tab-contents project-card active-tab" data-category="Software" data-order="10">
+                    <div class="row">
+                        <div class="portfolio-10-1">
+                            <img src="images/voice-isolation.png">
+                        </div>
+                        <div class="portfolio-10-2">
+                            <h2><a href="https://github.com/titushyunkyu/vocal-isolation-signal-processing" target="_blank" class="buttons">Vocal Isolation with Signal Processing - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project applies signal processing techniques to isolate vocals from a mixed audio track using spectral gating and harmonic/percussive source separation (HPSS). The method leverages time-frequency analysis to suppress background instrumentation while enhancing vocal content. Spectral gating is used to attenuate non-vocal frequency bins, while HPSS cleanly separates harmonic (e.g., vocals, synths) and percussive (e.g., drums) components. This project demonstrates my proficiency in digital signal processing, audio analysis with librosa, and real-world applications of Fourier transforms.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 9-->
+                <div class="tab-contents project-card active-tab" data-category="Software" data-order="9">
+                    <div class="row">
+                        <div class="portfolio-9-1">
+                            <img src="images/scouting-tool.png">
+                        </div>
+                        <div class="portfolio-9-2">
+                            <h2><a href="https://github.com/titushyunkyu/FIFA-Scouting-Recommender" target="_blank" class="buttons">FIFA Scouting Recommender - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is a machine learning tool that helps soccer managers find affordable players with similar attributes to elite stars using the FIFA 2024 dataset. It combines K-Nearest Neighbors with clustering algorithms (K-Means and HDBSCAN) to group players by playstyle and recommend hidden talent. PCA visualizations and silhouette scores assess cluster quality. This project highlights my skills in data preprocessing, clustering, and visual analytics with scikit-learn and matplotlib.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 8-->
+                <div class="tab-contents project-card active-tab" data-category="Hardware" data-order="8">
+                    <div class="row">
+                        <div class="portfolio-8-1">
+                            <img src="images/pcb.png">
+                        </div>
+                        <div class="portfolio-8-2">
+                            <h2><a href="images/Boost_Converter_Project_Report.pdf" target="_blank" class="buttons">Boost Converter Circuit - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>As part of my applied circuits coursework, I designed, simulated, and constructed a boost converter circuit to step up a 5V supply voltage to a stable 14.11V output. I completed the full design cycle, including schematic creation and PCB layout in KiCad, ordering the PCB, soldering components, and implementing the circuit. A 555 timer generated a PWM signal with a 78% duty cycle at 1 kHz to drive the MOSFET, enabling efficient energy storage and voltage regulation. Simulations in Multisim and experimental testing validated the circuit's performance, showcasing my proficiency in PCB design, circuit analysis, and hands-on implementation.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 7-->
+                <div class="tab-contents project-card active-tab" data-category="Hardware" data-order="7">
+                    <div class="row">
+                        <div class="portfolio-7-1">
+                            <img src="images/8-bit cpu.png">
+                        </div>
+                        <div class="portfolio-7-2">
+                            <h2><a href="https://github.com/titushyunkyu/8-bit-cpu/tree/main" target="_blank" class="buttons">8-bit CPU - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>The CPU features a 5-bit address bus with access to 32 memory locations and supports operations such as load, store, addition, subtraction, and branching. The simple_cpu module integrates an opcode decoder, instruction sequencer, control signals logic, and a datapath. The datapath includes an ALU (with an adder-subtractor and full-adder), a parser, tri-state buffers, and a zero flag. Custom assembly code was programmed and tested using Quartus' simulation tools and a hierarchical testbench to ensure functionality. This project demonstrated my proficiency in hardware description languages, digital system design, and simulation-based verification, culminating in a fully operational CPU.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 6-->
+                <div class="tab-contents project-card active-tab" data-category="Software" data-order="6">
+                    <div class="row">
+                        <div class="portfolio-6-1">
+                            <img src="images/EPL Match Predictor.png">
+                        </div>
+                        <div class="portfolio-6-2">
+                            <h2><a href="https://github.com/titushyunkyu/EPL-match-predictor" target="_blank" class="buttons">EPL Match Predictor - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is an advanced machine learning project designed to predict the outcomes of English Premier League matches. The project encompasses a comprehensive web scraper that collects historical and future match data from the web, ensuring the model is trained on the most up-to-date information. Utilizing this data, this project leverages a Random Forest Classifier to determine whether a team will win, draw, or lose based on various match features. The model has been fine-tuned through hyperparameter optimization and addresses class imbalance through oversampling techniques. </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 5-->
+                <div class="tab-contents project-card active-tab" data-category="Software" data-order="5">
+                    <div class="row">
+                        <div class="portfolio-5-1">
+                            <img src="images/wordle solver.png">
+                        </div>
+                        <div class="portfolio-5-2">
+                            <h2><a href="https://github.com/titushyunkyu/wordle-solver" target="_blank" class="buttons">Wordle Solver - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is a Python-based Wordle solver that uses information theory concepts such as entropy and probability to recommend the best possible guesses. This solver aims to efficiently solve Wordle puzzles by calculating the information gain of each guess and selecting the optimal word based on combined entropy and probability scores.
+                                The program performed an average of 3.6 guesses per word in a simulation of 1000 trials. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 4-->
+                <div class="tab-contents project-card active-tab" data-category="Software" data-order="4">
+                    <div class="row">
+                        <div class="portfolio-4-1">
+                            <img src="images/task manager.png">
+                        </div>
+                        <div class="portfolio-4-2">
+                            <h2><a href="https://github.com/titushyunkyu/task-manager-app" target="_blank" class="buttons">Task Manager App - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is a web-browser task manager application written in HTML, CSS, and JavaScript. It contains a basic model of a to-do list categorized by different classes, a Pomodoro timer, and essential date, time, and weather information, as well as a study playlist. More information on the functionalities of the web application can be found on the GitHub page linked above. 
+                                <br><br> The web-application can be accessed <a href="https://titushyunkyu.github.io/task-manager-app/" target="_blank" class="buttons" id="task-manager-link"><span class=button1>here</span></a>. </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 3-->
+                <div class="tab-contents project-card active-tab" data-category="Software" data-order="3">
+                    <div class="row">
+                        <div class="portfolio-1-1">
+                            <img src="images/mctc tic-tac-toe.png">
+                        </div>
+                        <div class="portfolio-1-2">
+                            <h2><a href="https://github.com/titushyunkyu/Tic-Tac-Toe" target="_blank" class="buttons">Tic-Tac-Toe Application - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is a Tic-Tac-Toe application written in Python. Within the application, the user can either play a regular game of Tic-Tac-Toe with 
+                                two players or go against the computer. The program is coded to implement a Pure Monte-Carlo Tree Search Algorithm. Within the program, the user 
+                                also has the choice to set the difficulty of the computer model.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 2-->
+                <div class="tab-contents project-card active-tab" data-category="Software" data-order="2">
+                    <div class="row">
+                        <div class="portfolio-3-1">
+                            <img src="images/pacman photo.png">
+                        </div>
+                        <div class="portfolio-3-2">
+                            <h2><a href="https://github.com/titushyunkyu/packman-replica" target="_blank" class="buttons">Pacman Replica - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project replicates the old Pac-Man game written in Python utilizing Pygame and the University of Virginia's Game Engine (UVAGE). The game's objective is to collect all coins without touching any ghosts within the given time. All of the ghosts' movements are completely randomized. Once the game is over (either by completion or failure), the user is prompted to either restart the game or quit. </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 1-->
+                <div class="tab-contents project-card active-tab" data-category="Software" data-order="1">
+                    <div class="row">
+                        <div class="portfolio-2-1">
+                            <img src="images/website portfolio.png">
+                        </div>
+                        <div class="portfolio-2-2">
+                            <h2><a href="https://github.com/titushyunkyu/tituslee-website" target="_blank" class="buttons">Personal Portfolio Website - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is my personal, professional portfolio website, which is the very website you are currently on. This website was created using HTML, 
+                                CSS, and JavaScript. The server is hosted through GitHub, and the domain is registered and bought through Namecheap. </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="portfolio-10-2">
-                <h2><a href="https://github.com/titushyunkyu/vocal-isolation-signal-processing" target="_blank" class="buttons">Vocal Isolation with Signal Processing - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project applies signal processing techniques to isolate vocals from a mixed audio track using spectral gating and harmonic/percussive source separation (HPSS). The method leverages time-frequency analysis to suppress background instrumentation while enhancing vocal content. Spectral gating is used to attenuate non-vocal frequency bins, while HPSS cleanly separates harmonic (e.g., vocals, synths) and percussive (e.g., drums) components. This project demonstrates my proficiency in digital signal processing, audio analysis with librosa, and real-world applications of Fourier transforms.</p>
-            </div>
-        </div>
-        <!-- project 9-->
-        <div class="row">
-            <div class="portfolio-9-1">
-                <img src="images/scouting-tool.png">
-            </div>
-            <div class="portfolio-9-2">
-                <h2><a href="https://github.com/titushyunkyu/FIFA-Scouting-Recommender" target="_blank" class="buttons">FIFA Scouting Recommender - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project is a machine learning tool that helps soccer managers find affordable players with similar attributes to elite stars using the FIFA 2024 dataset. It combines K-Nearest Neighbors with clustering algorithms (K-Means and HDBSCAN) to group players by playstyle and recommend hidden talent. PCA visualizations and silhouette scores assess cluster quality. This project highlights my skills in data preprocessing, clustering, and visual analytics with scikit-learn and matplotlib.</p>
-            </div>
-        </div>
-        <!-- project 8-->
-        <div class="row">
-            <div class="portfolio-8-1">
-                <img src="images/pcb.png">
-            </div>
-            <div class="portfolio-8-2">
-                <h2><a href="images/Boost_Converter_Project_Report.pdf" target="_blank" class="buttons">Boost Converter Circuit - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>As part of my applied circuits coursework, I designed, simulated, and constructed a boost converter circuit to step up a 5V supply voltage to a stable 14.11V output. I completed the full design cycle, including schematic creation and PCB layout in KiCad, ordering the PCB, soldering components, and implementing the circuit. A 555 timer generated a PWM signal with a 78% duty cycle at 1 kHz to drive the MOSFET, enabling efficient energy storage and voltage regulation. Simulations in Multisim and experimental testing validated the circuit's performance, showcasing my proficiency in PCB design, circuit analysis, and hands-on implementation.</p>
-            </div>
-        </div>
-        <!-- project 7-->
-        <div class="row">
-            <div class="portfolio-7-1">
-                <img src="images/8-bit cpu.png">
-            </div>
-            <div class="portfolio-7-2">
-                <h2><a href="https://github.com/titushyunkyu/8-bit-cpu/tree/main" target="_blank" class="buttons">8-bit CPU - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>The CPU features a 5-bit address bus with access to 32 memory locations and supports operations such as load, store, addition, subtraction, and branching. The simple_cpu module integrates an opcode decoder, instruction sequencer, control signals logic, and a datapath. The datapath includes an ALU (with an adder-subtractor and full-adder), a parser, tri-state buffers, and a zero flag. Custom assembly code was programmed and tested using Quartus' simulation tools and a hierarchical testbench to ensure functionality. This project demonstrated my proficiency in hardware description languages, digital system design, and simulation-based verification, culminating in a fully operational CPU.</p>
-            </div>
-        </div>
-        <!-- project 6 -->
-        <div class="row">
-            <div class="portfolio-6-1">
-                <img src="images/EPL Match Predictor.png">
-            </div>
-            <div class="portfolio-6-2">
-                <h2><a href="https://github.com/titushyunkyu/EPL-match-predictor" target="_blank" class="buttons">EPL Match Predictor - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project is an advanced machine learning project designed to predict the outcomes of English Premier League matches. The project encompasses a comprehensive web scraper that collects historical and future match data from the web, ensuring the model is trained on the most up-to-date information. Utilizing this data, this project leverages a Random Forest Classifier to determine whether a team will win, draw, or lose based on various match features. The model has been fine-tuned through hyperparameter optimization and addresses class imbalance through oversampling techniques. </p>
-            </div>
-        </div>
-        <!-- project 5 -->
-        <div class="row">
-            <div class="portfolio-5-1">
-                <img src="images/wordle solver.png">
-            </div>
-            <div class="portfolio-5-2">
-                <h2><a href="https://github.com/titushyunkyu/wordle-solver" target="_blank" class="buttons">Wordle Solver - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project is a Python-based Wordle solver that uses information theory concepts such as entropy and probability to recommend the best possible guesses. This solver aims to efficiently solve Wordle puzzles by calculating the information gain of each guess and selecting the optimal word based on combined entropy and probability scores.
-                    The program performed an average of 3.6 guesses per word in a simulation of 1000 trials. 
-                </p>
-            </div>
-        </div>
-        <!-- project 4 -->
-        <div class="row">
-            <div class="portfolio-4-1">
-                <img src="images/task manager.png">
-            </div>
-            <div class="portfolio-4-2">
-                <h2><a href="https://github.com/titushyunkyu/task-manager-app" target="_blank" class="buttons">Task Manager App - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project is a web-browser task manager application written in HTML, CSS, and JavaScript. It contains a basic model of a to-do list categorized by different classes, a Pomodoro timer, and essential date, time, and weather information, as well as a study playlist. More information on the functionalities of the web application can be found on the GitHub page linked above. 
-                    <br><br> The web-application can be accessed <a href="https://titushyunkyu.github.io/task-manager-app/" target="_blank" class="buttons" id="task-manager-link"><span class=button1>here</span></a>. </p>
-            </div>
-        </div>
-        <!-- project 3 -->
-        <div class="row">
-            <div class="portfolio-1-1">
-                <img src="images/mctc tic-tac-toe.png">
-            </div>
-            <div class="portfolio-1-2">
-                <h2><a href="https://github.com/titushyunkyu/Tic-Tac-Toe" target="_blank" class="buttons">Tic-Tac-Toe Application - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project is a Tic-Tac-Toe application written in Python. Within the application, the user can either play a regular game of Tic-Tac-Toe with 
-                    two players or go against the computer. The program is coded to implement a Pure Monte-Carlo Tree Search Algorithm. Within the program, the user 
-                    also has the choice to set the difficulty of the computer model.</p>
-            </div>
-        </div>
-        <!-- project 2 -->
-        <div class="row">
-            <div class="portfolio-3-1">
-                <img src="images/pacman photo.png">
-            </div>
-            <div class="portfolio-3-2">
-                <h2><a href="https://github.com/titushyunkyu/packman-replica" target="_blank" class="buttons">Pacman Replica - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project replicates the old Pac-Man game written in Python utilizing Pygame and the University of Virginia's Game Engine (UVAGE). The game's objective is to collect all coins without touching any ghosts within the given time. All of the ghosts' movements are completely randomized. Once the game is over (either by completion or failure), the user is prompted to either restart the game or quit. </p>
-            </div>
-        </div>
-        <!-- project 1 -->            
-        <div class="row">
-            <div class="portfolio-2-1">
-                <img src="images/website portfolio.png">
-            </div>
-            <div class="portfolio-2-2">
-                <h2><a href="https://github.com/titushyunkyu/tituslee-website" target="_blank" class="buttons">Personal Portfolio Website - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project is my personal, professional portfolio website, which is the very website you are currently on. This website was created using HTML, 
-                    CSS, and JavaScript. The server is hosted through GitHub, and the domain is registered and bought through Namecheap. </p>
-            </div>
-        </div>
 
-        <!-- project to come -->
-        <div class="row-notyet">
-            <div class="portfolio-4-1">
-                <img src="images/task manager.png">
-            </div>
-            <div class="portfolio-4-2">
-                <h2><a href="" class="buttons">Project 3: Live Sports App &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                <p>This project is a full-stack live API application for sports score updates. This application is designed to provide real-time scores across various 
-                    sports, including soccer, basketball, football, and more. The application is built utilizing React on the front end and Django on the back end, ensuring 
-                    a seamless, responsive user experience. </p>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -217,6 +234,41 @@
         });
     }
 </script>
+<script>
+    const filterLinks = document.getElementsByClassName("tab-links");
+    const projectContainer = document.querySelector('.projects-wrapper');
+    const allCards = Array.from(document.getElementsByClassName("project-card"));
+
+    function filterTab(category) {
+        // Update active link styling
+        for (let link of filterLinks) {
+            link.classList.remove("active-link");
+        }
+        event.currentTarget.classList.add("active-link");
+
+        let cardsToShow = allCards;
+
+        if (category === 'All') {
+            // Sort descending by data-order (newest first)
+            cardsToShow = [...allCards].sort((a, b) => parseInt(b.dataset.order) - parseInt(a.dataset.order));
+        } else {
+            // Filter by category, preserve existing order
+            cardsToShow = allCards.filter(card => card.dataset.category === category);
+        }
+
+        // Hide all cards
+        allCards.forEach(card => {
+            card.style.display = "none";
+        });
+
+        // Append and show filtered cards in correct order
+        cardsToShow.forEach(card => {
+            card.style.display = "block";
+            projectContainer.appendChild(card);
+        });
+    }
+</script>
+
 
 
 </body>

@@ -234,7 +234,7 @@ nav ul li a:hover::after{
 }
 
 .tab-titles{
-    padding-top: 15px;
+    padding-top: 5px;
 }
 
 .subtitle{
@@ -258,7 +258,7 @@ nav ul li a:hover::after{
 
 .tab-titles{
     display: flex;
-    margin: 10px 0 10px;
+    margin: 10px 0 0px;
     color: var(--primary-text-color)
 }
 
@@ -342,7 +342,7 @@ nav ul li a:hover::after{
 .portfolio-title{
     font-size: 60px;
     font-weight: 600;
-    color: var(--primary-text-color);
+    color: var(--primary-color);
     margin-bottom: 10px;
     margin-top: 5%;
 }
@@ -353,7 +353,7 @@ nav ul li a:hover::after{
 }
 
 #portfolio a{
-    color: var(--primary-color);
+    color: var(--primary-text-color);
     padding-bottom: 10px;
     font-size: 33px;
 }
@@ -377,7 +377,7 @@ nav ul li a:hover::after{
 .buttons{
     text-decoration: underline;
     font-size:40px;
-    font-weight:600;
+    font-weight:550;
     margin-bottom:5px;
     color: var(--border-color);
     display: inline-block;
@@ -399,7 +399,8 @@ nav ul li a:hover::after{
     height: 16vw;
     border-radius: 15px;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-1-2{
     flex-basis: 60%;
@@ -423,7 +424,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-2-2{
     flex-basis: 60%;
@@ -450,7 +452,8 @@ nav ul li a:hover::after{
     height: 16vw;
     border-radius: 15px;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-3-2{
     flex-basis: 60%;
@@ -473,7 +476,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-4-2{
     flex-basis: 60%;
@@ -496,7 +500,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-5-2{
     flex-basis: 60%;
@@ -520,7 +525,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-6-2{
     flex-basis: 60%;
@@ -543,7 +549,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-7-2{
     flex-basis: 60%;
@@ -566,7 +573,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-8-2{
     flex-basis: 60%;
@@ -590,7 +598,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-9-2{
     flex-basis: 60%;
@@ -613,7 +622,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-10-2{
     flex-basis: 60%;
@@ -636,7 +646,8 @@ nav ul li a:hover::after{
     border-radius: 15px;
     height: 16vw;
     border: solid 2px;
-    position: relative
+    position: relative;
+    border-color: var(--border-color)
 }
 .portfolio-11-2{
     flex-basis: 60%;
@@ -780,9 +791,6 @@ nav .fa-solid{
         padding-bottom: 5px;
     }
 
-    .tab-titles p{
-        font-size: 80px;
-    }
     .tab-titles{
         margin: 10px 0 25px;
     }
@@ -799,6 +807,7 @@ nav .fa-solid{
         margin: 0px 10px;
         margin-top: 50px;
     }
+    
     #portfolio a{
         font-size: 14px;
     }
