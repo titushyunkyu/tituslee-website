@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #327ed4; /* main accents */
+    --primary-color: #423cc0; /* main accents */
     --secondary-color: #161B22; /* Background color (blue) */
     --text-color: #969ba1; /* Light text color (off-white) */
     --primary-text-color: #F0F6FC;
     --link-hover-color: #0F172A; /* Link hover color (light blue) */
-    --border-color: #173b65; /* Border color (same as primary) */
+    --border-color: #171a65; /* Border color (same as primary) */
 }
 
 
@@ -194,6 +194,7 @@ nav ul li a:hover::after{
     color: var(--primary-color);
     background-color: var(--secondary-color);
     transition: transform 0.4s;
+    z-index: 1000;
 }
 .btn:hover{
     background: var(--primary-color);
@@ -210,11 +211,11 @@ nav ul li a:hover::after{
 #about{
     padding:80px 20px;
     color: var(--text-color);
-    border: 2px solid var(--border-color);
+    /*border: 2px solid var(--border-color);*/
     padding: 20px; 
     margin: 80px 80px;
     border-radius: 20px;
-    background-color: var(--secondary-color);
+    /*background-color: var(--secondary-color);*/
 }
 
 .row{
@@ -251,7 +252,7 @@ nav ul li a:hover::after{
 
 .about-col-2 img{
     width:100%;
-    border-radius: 15px;
+    border-radius: 70px;
     margin-top: 10%;
     margin-bottom: 5%;
 }
@@ -305,6 +306,19 @@ nav ul li a:hover::after{
     display: block;
 }
 
+/* Scroll reveal (fade + pop-up) */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px) scale(0.90);
+    transition: opacity 800ms ease, transform 800ms ease;
+    will-change: opacity, transform;
+}
+
+.reveal.reveal-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
 /* ---------Portfolio------------ */
 
 /* Remove blank space for portfolio page only */
@@ -334,11 +348,11 @@ nav ul li a:hover::after{
 #portfolio{
     padding:80px 20px;
     color: var(--text-color);
-    border: 2px solid var(--border-color);
+    /* border: 2px solid var(--border-color); */
     padding: 30px; 
     margin: 0px 80px;
     border-radius: 20px;
-    background-color: var(--secondary-color);
+    /*background-color: var(--secondary-color);*/
     margin-top: 0; /* Ensure no gap at the top */
     padding-top: 20px; /* Adjust padding as necessary */
 }
@@ -675,6 +689,78 @@ body.portfolio-page .tab-titles .tab-links span {
     font-weight: 600;
 }
 
+/* portfolio project 11 */
+.portfolio-12-1{
+    flex-basis: 32%;
+    margin-top: 50px;
+}
+.portfolio-12-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    position: relative;
+    border-color: var(--border-color)
+}
+.portfolio-12-2{
+    flex-basis: 60%;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+.portfolio-12-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* portfolio project 13 */
+.portfolio-13-1{
+    flex-basis: 32%;
+    margin-top: 50px;
+}
+.portfolio-13-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    position: relative;
+    border-color: var(--border-color)
+}
+.portfolio-13-2{
+    flex-basis: 60%;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+.portfolio-13-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* portfolio project 14 */
+.portfolio-14-1{
+    flex-basis: 32%;
+    margin-top: 50px;
+}
+.portfolio-14-1 img{
+    width:100%;
+    border-radius: 15px;
+    height: 16vw;
+    border: solid 2px;
+    position: relative;
+    border-color: var(--border-color)
+}
+.portfolio-14-2{
+    flex-basis: 60%;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+.portfolio-14-2 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
 .tab-titles {
     display: flex;
     justify-content: center;
@@ -804,9 +890,6 @@ nav .fa-solid{
     #about{
         padding: 0px;
         margin: 0px 10px;
-        border-radius: 20px;
-        border: 1px solid;
-        border-color: var(--border-color);
     }
     .subtitle{
         font-size: 35px;
@@ -861,11 +944,11 @@ nav .fa-solid{
         margin-top: 30px;
         margin-bottom: 20px;
     }
-    .portfolio-11-1, .portfolio-11-2, .portfolio-10-1, .portfolio-10-2, .portfolio-9-1, .portfolio-9-2,.portfolio-8-1, .portfolio-8-2, .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2, .portfolio-7-1, .portfolio-7-2{
+    .portfolio-14-1, .portfolio-14-2, .portfolio-13-1, .portfolio-13-2, .portfolio-12-1, .portfolio-12-2, .portfolio-11-1, .portfolio-11-2, .portfolio-10-1, .portfolio-10-2, .portfolio-9-1, .portfolio-9-2,.portfolio-8-1, .portfolio-8-2, .portfolio-1-1, .portfolio-1-2, .portfolio-2-1, .portfolio-2-2, .portfolio-3-1, .portfolio-3-2, .portfolio-4-1, .portfolio-4-2, .portfolio-5-1, .portfolio-5-2, .portfolio-6-1, .portfolio-6-2, .portfolio-7-1, .portfolio-7-2{
         flex-basis: 100%;
     }
 
-    .portfolio-11-2,.portfolio-10-2,.portfolio-9-2,.portfolio-8-2, .portfolio-7-2, .portfolio-6-2, .portfolio-5-2, .portfolio-4-2, .portfolio-3-2, .portfolio-2-2, .portfolio-1-2{
+    .portfolio-14-2,.portfolio-13-2,.portfolio-12-2,.portfolio-11-2,.portfolio-10-2,.portfolio-9-2,.portfolio-8-2, .portfolio-7-2, .portfolio-6-2, .portfolio-5-2, .portfolio-4-2, .portfolio-3-2, .portfolio-2-2, .portfolio-1-2{
         margin-top: 0px;
     }
     .row p{
@@ -945,6 +1028,19 @@ nav .fa-solid{
         margin-top: 10px;
         height: 21vh;
     }
+    .portfolio-12-1 img{
+        margin-top: 10px;
+        height: 21vh;
+    }
+    .portfolio-13-1 img{
+        margin-top: 10px;
+        height: 21vh;
+    }
+    .portfolio-14-1 img{
+        margin-top: 10px;
+        height: 21vh;
+    }
+    
     /* ---Contact--- */
     #contact{
         padding-top: 0px;
@@ -965,7 +1061,7 @@ nav .fa-solid{
         border-radius: 100px;
         padding: 20px 23px;
         font-size:15px;
-        z-index: 2;
+        z-index: 1000;
     }
     
 }

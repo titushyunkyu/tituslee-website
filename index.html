@@ -44,32 +44,32 @@
     </div>
    </div> 
 
-<!-- ABOUT PAGE -->
-    <div id="about">
+<!-- ABOUT PAGE --> 
+    <div id="about" class = "reveal">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <h2 class="subtitle">About Me</h2>
+                    <h2 class="subtitle" >About Me</h2>
                     <p1>I'm an Electrical and Computer Engineering student at the University of Virginia, also pursuing a minor in engineering business. I'm also one of only 17 selected students in Cohort 6 of the A. James Clark Scholars Program at the University of Virginia. I'm excited to share my journey, projects, and experiences with you on this website. Thank you for stopping by, and I hope you enjoy learning more about me and my work.</p1>
                     <div class="tab-titles">
                         <p class = "tab-links active-link" onclick="opentab('skills')"><span>Skills</span></p>
                         <p class = "tab-links" onclick="opentab('experience')"><span>Experiences</span></p>
                         <p class = "tab-links" onclick="opentab('education')"><span>Education</span></p>
                     </div>
-                    <div class="tab-contents active-tab", id="skills">
+                    <div class="reveal tab-contents active-tab", id="skills">
                         <ul>
                             <li><span>Programming:</span><br>&emsp;&nbsp;Python, Java, JavaScript, React, Bash, x86 Assembly, C, C++, VHDL.</li>
                             <li><span>Simulation Tools:</span><br>&emsp;&nbsp;AutoCAD, Fusion360, NI Multisim, KiCad, Quartus. </li>
                             <li><span>Languages:</span><br>&emsp;&nbsp;Korean (Native), English (Native).</li>
                         </ul>
                     </div>
-                    <div class="tab-contents", id="experience">
+                    <div class="reveal tab-contents", id="experience">
                         <ul>
                             <li><span>Research Intern, Nano Materials and Devices Lab @DGIST (June 2025 - August 2025):</span>
                                 <br>&emsp;&nbsp;Designed and tested triboelectric nanogenerators (TENGs) using self-treated materials, integrating them into a functional motion-sensing system for energy-harvesting and real-time intrusion detection.</li>
                         </ul>
                     </div>
-                    <div class="tab-contents", id="education">
+                    <div class="reveal tab-contents", id="education">
                         <ul>
                             <li><span>University of Virginia (August 2023 - Present):</span>
                                 <br>&emsp;&nbsp;B.S. in Electrical Engineering and Computer Engineering, Minor in Engineering Business.
@@ -166,6 +166,35 @@
         document.querySelector('.typing-line2').classList.add('done');
       }, 7920);
     });
+</script>
+
+<script>
+  // Scroll reveal (fade + pop-up) that repeats on scroll up/down
+  (function () {
+    const revealEls = document.querySelectorAll('.reveal');
+
+
+    // Fallback: if IntersectionObserver isn't supported, just show everything
+    if (!('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('reveal-visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+        } else {
+          entry.target.classList.remove('reveal-visible');
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -80px 0px'
+    });
+
+    revealEls.forEach(el => observer.observe(el));
+  })();
 </script>
 
 </body>
