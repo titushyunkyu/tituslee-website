@@ -28,7 +28,7 @@ This portfolio is designed to give visitors an insight into my academic journey,
 
 ## How to Use
 
-You can view the website live at [titushyunkyu.com](https://titushyunkyu.com). The repository is public, so feel free to fork or clone it if you are interested in using or learning from its structure.
+You can view the website live at [titushyunkyu.com](https://tituslee.com). The repository is public, so feel free to fork or clone it if you are interested in using or learning from its structure.
 
 ### Setup Instructions
 
