@@ -1,6 +1,6 @@
 # Titus Lee's Personal Portfolio Website
 
-Welcome to the repository for [Titus Hyunkyu Lee's personal portfolio website](https://titushyunkyu.com), hosted on GitHub Pages. This website showcases my background, projects, and professional experience as an Electrical and Computer Engineering student at the University of Virginia.
+Welcome to the repository for [Titus Hyunkyu Lee's personal portfolio website](https://tituslee.com), hosted on GitHub Pages. This website showcases my background, projects, and professional experience as an Electrical and Computer Engineering student at the University of Virginia.
 
 ## Overview
 
