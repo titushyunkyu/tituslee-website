@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Google tag (gtag.js) -->
+
+        <!-- google tag -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6HJ0LZD7X"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -10,292 +11,317 @@
 
         gtag('config', 'G-L6HJ0LZD7X');
         </script>
+
+        <!-- setup -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio - Titus Lee</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Titus Lee - NEW Portfolio Website</title>
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="portfolio.css">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script src="https://kit.fontawesome.com/a024b6bda8.js" crossorigin="anonymous"></script>
-        <a href="#header" class = "btn btn2"><i class="fa-solid fa-chevron-up"></i></a>    
 
     </head>
-    <body class="portfolio-page">
-        <!-- Header Section -->
-        <div id="header">
-            <div class="container container-logo">
+
+    <body>
+        <!-- header -->
+        <div id = "header">
+            <div id ="top-bar">
                 <nav>
                     <img src="images/uva two lines logo.png" class="logo1">
-                    <img src="images/csp logo.png" class="logo">
-                    <ul id="sidemenu">
-                        <li><a href="index.html">Home</a></li>
+                    <img src="images/csp logo.png" class="logo2">
+                    <ul id="menu">
+                        <li></li>
+                        <li><a href="index.html#header">Home</a></li>
                         <li><a href="index.html#about">About</a></li>
                         <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                        <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                        <li><a href="#contact">Contact</a></li><i class="fa-solid fa-x" onclick="closemenu()"></i>
                     </ul>
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
             </div>
+            <a href="#header" class = "btn upbtn"><i class="fa-solid fa-chevron-up"></i></a>
         </div>
 
-<!-- -------------Portfolio------------- -->
-<div id="portfolio">
-    <div class="container portfolio-container">
-        <h1 class="portfolio-title">Project Portfolio</h1>
-        <div class="tab-titles">
-            <p class="tab-links active-link" onclick="filterTab('All')"><span>&nbspAll&nbsp</span></p>
-            <p class="tab-links" onclick="filterTab('Software')"><span>Software</span></p>
-            <p class="tab-links" onclick="filterTab('Hardware')"><span>Hardware</span></p>
-        </div>
-            <div class="projects-wrapper">
-                <!-- project 14-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Hardware" data-order="14">
-                    <div class="row">
-                        <div class="portfolio-14-1">
-                            <img src="images/audio synthesizer.jpg">
-                        </div>
-                        <div class="portfolio-14-2">
-                            <h2><a href="images/Audio_Synthesizer_Project_Report.pdf" target="_blank" class="buttons">Audio Synthesizer PCB - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>Designed and built an audio synthesizer using a fully discrete BJT-based operational amplifier with a PNP differential input stage, active-load voltage gain stage with Miller compensation, and complementary class-AB output buffers. Configured the amplifier as a relaxation oscillator using combined positive and negative feedback to generate ~260 Hz–1 kHz tones with potentiometer-controlled frequency and volume, directly driving an 8 Ω speaker. Verified performance through hand analysis, Multisim simulation (DC bias, AC gain, phase margin, impedance, transient response), and custom PCB implementation with experimental testing.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 13-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Hardware" data-order="14">
-                    <div class="row">
-                        <div class="portfolio-13-1">
-                            <img src="images/embedded final.jpg">
-                        </div>
-                        <div class="portfolio-13-2">
-                            <h2><a href="https://github.com/titushyunkyu/Embedded-Music-Player" target="_blank" class="buttons">Embedded Music Player - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>Developed an embedded music player on the TI MSPM0G3507 LaunchPad with the BOOSTXL-EDUMKII BoosterPack using C and bare-metal programming. Implemented PWM-based audio generation using hardware timers and prescalers to play a predefined song on the buzzer, and designed a finite state machine (FSM) to handle play/pause control via push buttons while displaying real-time note information on the LCD. Configured peripherals by referencing microcontroller and peripheral datasheets, integrating timers, GPIO, PWM, and LCD interfaces to demonstrate low-level firmware development and real-time embedded system design.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 12-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Software" data-order="12">
-                    <div class="row">
-                        <div class="portfolio-12-1">
-                            <img src="images/course review.png">
-                        </div>
-                        <div class="portfolio-12-2">
-                            <h2><a href="https://github.com/titushyunkyu/course-review-application" target="_blank" class="buttons">Course Review App - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>JavaFX desktop CRUD application built using an MVC architecture with JDBC-based SQLite persistence. Supports user authentication, course creation, flexible course search, and anonymous course reviews with aggregated ratings and timestamped updates. I implemented the course reviews scene, handled review create/edit/delete logic, enforced single-review constraints per user, and contributed to debugging, validation, and overall application stability.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 11-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Hardware" data-order="11">
-                    <div class="row">
-                        <div class="portfolio-11-1">
-                            <img src="images/audio-analyzer.jpg">
-                        </div>
-                        <div class="portfolio-11-2">
-                            <h2><a href="images/Audio_Analyzer_Project_Report.pdf" target="_blank" class="buttons">Audio Analyzer PCB - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>This project involved designing and building an audio analyzer PCB that lights up LEDs in real time based on audio input. By combining a summing amplifier, high-pass and low-pass filters, peak detectors, and two types of LED drivers (analog and PWM), the system separates audio into treble and bass frequencies. The circuit lights up green LEDs for high-pitched sounds (e.g., snares, guitar solos) and red LEDs for bass (e.g., kicks), providing a real-time visual representation of music. I tested the system with "Seven Nation Army" and verified the response using simulations and physical measurements.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 10-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Software" data-order="10">
-                    <div class="row">
-                        <div class="portfolio-10-1">
-                            <img src="images/voice-isolation.png">
-                        </div>
-                        <div class="portfolio-10-2">
-                            <h2><a href="https://github.com/titushyunkyu/vocal-isolation-signal-processing" target="_blank" class="buttons">Vocal Isolation with Signal Processing - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>This project applies signal processing techniques to isolate vocals from a mixed audio track using spectral gating and harmonic/percussive source separation (HPSS). The method leverages time-frequency analysis to suppress background instrumentation while enhancing vocal content. Spectral gating is used to attenuate non-vocal frequency bins, while HPSS cleanly separates harmonic (e.g., vocals, synths) and percussive (e.g., drums) components. This project demonstrates my proficiency in digital signal processing, audio analysis with librosa, and real-world applications of Fourier transforms.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 9-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Software" data-order="9">
-                    <div class="row">
-                        <div class="portfolio-9-1">
-                            <img src="images/scouting-tool.png">
-                        </div>
-                        <div class="portfolio-9-2">
-                            <h2><a href="https://github.com/titushyunkyu/FIFA-Scouting-Recommender" target="_blank" class="buttons">FIFA Scouting Recommender - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>This project is a machine learning tool that helps soccer managers find affordable players with similar attributes to elite stars using the FIFA 2024 dataset. It combines K-Nearest Neighbors with clustering algorithms (K-Means and HDBSCAN) to group players by playstyle and recommend hidden talent. PCA visualizations and silhouette scores assess cluster quality. This project highlights my skills in data preprocessing, clustering, and visual analytics with scikit-learn and matplotlib.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 8-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Hardware" data-order="8">
-                    <div class="row">
-                        <div class="portfolio-8-1">
-                            <img src="images/pcb.png">
-                        </div>
-                        <div class="portfolio-8-2">
-                            <h2><a href="images/Boost_Converter_Project_Report.pdf" target="_blank" class="buttons">Boost Converter Circuit - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>As part of my applied circuits coursework, I designed, simulated, and constructed a boost converter circuit to step up a 5V supply voltage to a stable 14.11V output. I completed the full design cycle, including schematic creation and PCB layout in KiCad, ordering the PCB, soldering components, and implementing the circuit. A 555 timer generated a PWM signal with a 78% duty cycle at 1 kHz to drive the MOSFET, enabling efficient energy storage and voltage regulation. Simulations in Multisim and experimental testing validated the circuit's performance, showcasing my proficiency in PCB design, circuit analysis, and hands-on implementation.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 7-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Hardware" data-order="7">
-                    <div class="row">
-                        <div class="portfolio-7-1">
-                            <img src="images/8-bit cpu.png">
-                        </div>
-                        <div class="portfolio-7-2">
-                            <h2><a href="https://github.com/titushyunkyu/8-bit-cpu/tree/main" target="_blank" class="buttons">8-bit CPU - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>The CPU features a 5-bit address bus with access to 32 memory locations and supports operations such as load, store, addition, subtraction, and branching. The simple_cpu module integrates an opcode decoder, instruction sequencer, control signals logic, and a datapath. The datapath includes an ALU (with an adder-subtractor and full-adder), a parser, tri-state buffers, and a zero flag. Custom assembly code was programmed and tested using Quartus' simulation tools and a hierarchical testbench to ensure functionality. This project demonstrated my proficiency in hardware description languages, digital system design, and simulation-based verification, culminating in a fully operational CPU.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 6-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Software" data-order="6">
-                    <div class="row">
-                        <div class="portfolio-6-1">
-                            <img src="images/EPL Match Predictor.png">
-                        </div>
-                        <div class="portfolio-6-2">
-                            <h2><a href="https://github.com/titushyunkyu/EPL-match-predictor" target="_blank" class="buttons">EPL Match Predictor - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>This project is an advanced machine learning project designed to predict the outcomes of English Premier League matches. The project encompasses a comprehensive web scraper that collects historical and future match data from the web, ensuring the model is trained on the most up-to-date information. Utilizing this data, this project leverages a Random Forest Classifier to determine whether a team will win, draw, or lose based on various match features. The model has been fine-tuned through hyperparameter optimization and addresses class imbalance through oversampling techniques. </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 5-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Software" data-order="5">
-                    <div class="row">
-                        <div class="portfolio-5-1">
-                            <img src="images/wordle solver.png">
-                        </div>
-                        <div class="portfolio-5-2">
-                            <h2><a href="https://github.com/titushyunkyu/wordle-solver" target="_blank" class="buttons">Wordle Solver - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>This project is a Python-based Wordle solver that uses information theory concepts such as entropy and probability to recommend the best possible guesses. This solver aims to efficiently solve Wordle puzzles by calculating the information gain of each guess and selecting the optimal word based on combined entropy and probability scores.
-                                The program performed an average of 3.6 guesses per word in a simulation of 1000 trials. 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- project 1-->
-                <div class="reveal tab-contents project-card active-tab" data-category="Software" data-order="1">
-                    <div class="row">
-                        <div class="portfolio-1-1">
-                            <img src="images/website portfolio.png">
-                        </div>
-                        <div class="portfolio-1-2">
-                            <h2><a href="https://github.com/titushyunkyu/tituslee-website" target="_blank" class="buttons">Personal Portfolio Website - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
-                            <p>This project is my personal, professional portfolio website, which is the very website you are currently on. This website was created using HTML, 
-                                CSS, and JavaScript. The server is hosted through GitHub, and the domain is registered and bought through Namecheap. </p>
-                        </div>
-                    </div>
-                </div>
+        <!-- portfolio -->
+        <div class = "portfolio" id = "portfolio">
+            <h1>Project Portfolio</h1>
+            <div class="tab-titles">
+                <p class="btn tab-links active-link" onclick="filterTab('All', this)"><span>&nbspAll&nbsp</span></p>
+                <p class="btn tab-links" onclick="filterTab('Software', this)"><span>Software</span></p>
+                <p class="btn tab-links" onclick="filterTab('Hardware', this)"><span>Hardware</span></p>
             </div>
-
-    </div>
-</div>
-
-<footer id="contact">
-    <div class="container">
-        <div class="contact-info">
-            <p><i class="fa-solid fa-envelope"></i> &nbsp;titushyunkyu1@gmail.com </p>
-            <p><i class="fa-solid fa-phone"></i> +1 (703) 909-7009 </p>                               
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=100012169932242" target="_blank"><i class="fa-brands fa-facebook"></i>&nbsp;</a>
-                <a href="https://www.instagram.com/hyun_kyu.l2/" target="_blank"><i class="fa-brands fa-instagram"></i>&nbsp;</a>
-                <a href="https://www.linkedin.com/in/titushyunkyu/" target="_blank"><i class="fa-brands fa-linkedin"></i>&nbsp;</a>
-                <a href="https://github.com/titushyunkyu" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </div>
-            <p>Website made and designed by Titus Lee</p>
+            <!-- micro audio synthesizer -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Hardware" data-order="11">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/audio synthesizer.jpg">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="images/Audio_Synthesizer_Project_Report.pdf" target="_blank" class="btn">Audio Synthesizer PCB - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>Designed and built an audio synthesizer using a fully discrete BJT-based operational 
+                                amplifier with a PNP differential input stage, active-load voltage gain stage with Miller 
+                                compensation, and complementary class-AB output buffers. Configured the amplifier as a relaxation 
+                                oscillator using combined positive and negative feedback to generate ~260 Hz–1 kHz tones with 
+                                potentiometer-controlled frequency and volume, directly driving an 8 Ω speaker.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- embedded music player: -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Hardware" data-order="10">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/embedded final.jpg">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="https://github.com/titushyunkyu/Embedded-Music-Player" target="_blank" class="btn">Embedded Music Player - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>Developed an embedded music player on the TI MSPM0G3507 LaunchPad with the BOOSTXL-EDUMKII 
+                                BoosterPack using C and bare-metal programming. Implemented PWM-based audio generation using 
+                                hardware timers and prescalers to play a predefined song on the buzzer, and designed a finite 
+                                state machine (FSM) to handle play/pause control via push buttons while displaying real-time note 
+                                information on the LCD. Configured peripherals by referencing microcontroller and peripheral datasheets, 
+                                integrating timers, GPIO, PWM, and LCD interfaces to demonstrate low-level firmware development and real-time 
+                                embedded system design.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- sde course review -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Software" data-order="9">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/course review.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="https://github.com/titushyunkyu/course-review-application" target="_blank" class="btn">Course Review App - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>JavaFX desktop CRUD application built using an MVC architecture with JDBC-based SQLite persistence. 
+                                Supports user authentication, course creation, flexible course search, and anonymous course reviews 
+                                with aggregated ratings and timestamped updates. I implemented the course reviews scene, handled review 
+                                create/edit/delete logic, enforced single-review constraints per user, and contributed to debugging, 
+                                and validation.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- electronics audio synthesizer -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Hardware" data-order="8">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/audio-analyzer.jpg">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="images/Audio_Analyzer_Project_Report.pdf" target="_blank" class="btn">Audio Analyzer PCB - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project involved designing and building an audio analyzer PCB that lights up LEDs in real time based on 
+                                audio input. By combining a summing amplifier, high-pass and low-pass filters, peak detectors, and two types 
+                                of LED drivers (analog and PWM), the system separates audio into treble and bass frequencies. The circuit 
+                                lights up green LEDs for high-pitched sounds (e.g., snares, guitar solos) and red LEDs for bass (e.g., kicks), 
+                                providing a real-time visual representation of music. I tested the system with "Seven Nation Army" and verified 
+                                the response using simulations and physical measurements.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- signals voice isolation -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Software" data-order="7">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/voice-isolation.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="https://github.com/titushyunkyu/vocal-isolation-signal-processing" target="_blank" class="btn">Vocal Isolation App - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project applies signal processing techniques to isolate vocals from a mixed audio track using spectral gating 
+                                and harmonic/percussive source separation (HPSS). The method leverages time-frequency analysis to suppress 
+                                background instrumentation while enhancing vocal content. Spectral gating is used to attenuate non-vocal 
+                                frequency bins, while HPSS cleanly separates harmonic (e.g., vocals, synths) and percussive (e.g., drums) 
+                                components.</p>
+                    </div>
+                </div>
+            </section>
+           <!-- ml scouting app -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Software" data-order="6">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/scouting-tool.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="https://github.com/titushyunkyu/FIFA-Scouting-Recommender" target="_blank" class="btn">FIFA Scouting Recommender - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <p>This project is a machine learning tool that helps soccer managers find affordable players with 
+                            similar attributes to elite stars using the FIFA 2024 dataset. It combines K-Nearest Neighbors 
+                            with clustering algorithms (K-Means and HDBSCAN) to group players by playstyle and recommend 
+                            hidden talent. PCA visualizations and silhouette scores assess cluster quality. This project 
+                            highlights my skills in data preprocessing, clustering, and visual analytics with scikit-learn 
+                            and matplotlib.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- circuits boost converter -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Hardware" data-order="5">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/pcb.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="images/Boost_Converter_Project_Report.pdf" target="_blank" class="btn">Boost Converter Circuit - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>As part of my applied circuits coursework, I designed, simulated, and constructed a boost 
+                                converter circuit to step up a 5V supply voltage to a stable 14.11V output. I completed the 
+                                full design cycle, including schematic creation and PCB layout in KiCad, ordering the PCB, 
+                                soldering components, and implementing the circuit. A 555 timer generated a PWM signal with a 
+                                78% duty cycle at 1 kHz to drive the MOSFET, enabling efficient energy storage and voltage 
+                                regulation.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- dld 8-bit cpu -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Hardware" data-order="4">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/8-bit cpu.png">
+                    </div>
+                    <div class = section-col-2>
+                         <h2><a href="https://github.com/titushyunkyu/8-bit-cpu/tree/main" target="_blank" class="btn">8-bit CPU - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>The CPU features a 5-bit address bus with access to 32 memory locations and supports operations 
+                                such as load, store, addition, subtraction, and branching. The simple_cpu module integrates an 
+                                opcode decoder, instruction sequencer, control signals logic, and a datapath. The datapath 
+                                includes an ALU (with an adder-subtractor and full-adder), a parser, tri-state buffers, and a 
+                                zero flag. Custom assembly code was programmed and tested using Quartus' simulation tools and a 
+                                hierarchical testbench to ensure functionality.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- epl match predictor -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Software" data-order="3">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/EPL Match Predictor.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="https://github.com/titushyunkyu/EPL-match-predictor" target="_blank" class="btn">EPL Match Predictor - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is an advanced machine learning project designed to predict the outcomes of English 
+                                Premier League matches. The project encompasses a comprehensive web scraper that collects 
+                                historical and future match data from the web, ensuring the model is trained on the most 
+                                up-to-date information. Utilizing this data, this project leverages a Random Forest Classifier 
+                                to determine whether a team will win, draw, or lose based on various match features. The model 
+                                has been fine-tuned through hyperparameter optimization and addresses class imbalance through 
+                                oversampling techniques. </p>
+                    </div>
+                </div>
+            </section>
+            <!-- wordle solver -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Software" data-order="2">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/wordle solver.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="https://github.com/titushyunkyu/wordle-solver" target="_blank" class="btn">Wordle Solver - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is a Python-based Wordle solver that uses information theory concepts such as 
+                                entropy and probability to recommend the best possible guesses. This solver aims to efficiently 
+                                solve Wordle puzzles by calculating the information gain of each guess and selecting the 
+                                optimal word based on combined entropy and probability scores. The program performed an average 
+                                of 3.6 guesses per word in a simulation of 1000 trials.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- website -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Software" data-order="1">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/website portfolio.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="https://github.com/titushyunkyu/tituslee-website" target="_blank" class="btn">Personal Portfolio Website - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>This project is my personal, professional portfolio website, which is the very website you are 
+                                currently on. This website was created using HTML, CSS, and JavaScript. The server is hosted 
+                                through GitHub, and the domain is registered and bought through Namecheap.</p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
-</footer>
 
-<script>
-    var sidemenu = document.getElementById("sidemenu");
+        <!-- contact -->
+        <div id="contact">
+            <div class="contact-info">
+                <h2>&nbsp;&nbsp;Contact&nbsp;&nbsp;</h2>
+                <p><span class = "last-comment">Feel free to reach out!</span></p>
+                <p><i class="fa-solid fa-envelope"></i> &nbsp;titushyunkyu1@gmail.com </p>
+                <p><i class="fa-solid fa-phone"></i> +1 (703) 909-7009 </p>                               
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100012169932242" target="_blank"><i class="btn social-btn fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/hyun_kyu.l2/" target="_blank"><i class="btn social-btn fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/titushyunkyu/" target="_blank"><i class="btn social-btn fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/titushyunkyu" target="_blank"><i class="btn social-btn fa-brands fa-github"></i></a>
+                </div>
+                <p><span class = "end">Website made and designed by Titus Lee</span></p>
+            </div>
+        </div>
+    </body>
 
-    function openmenu() {
-        sidemenu.style.right = "0";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
 
-    // Apply dynamic background visibility only for portfolio page
-    if (document.body.classList.contains('portfolio-page')) {
-        document.addEventListener('scroll', function () {
-            var scrollPosition = window.pageYOffset;
-            var fadeElement = document.body.style;
+    <script>
+        const filterLinks = Array.from(document.getElementsByClassName("tab-links"));
+        const projectContainer = document.querySelector(".portfolio");
+        const allCards = Array.from(document.getElementsByClassName("project-card"));
 
-            if (scrollPosition <= 10) {
-                // Gradual fade at the top of the page
-                var topOpacity = scrollPosition / 10; // Linearly adjust opacity from 0 to 1 within the first 10px
-                fadeElement.setProperty('--fade-opacity', topOpacity);
-            } else {
-                // Fully visible background after 10px
-                fadeElement.setProperty('--fade-opacity', 1);
-            }
+        let revealObserver = null;
+
+        function initRevealObserver() {
+        if (!("IntersectionObserver" in window)) {
+            // fallback: just show everything
+            allCards.forEach(c => c.classList.add("reveal-visible"));
+            return;
+        }
+
+        revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("reveal-visible");
+            else entry.target.classList.remove("reveal-visible");
+            });
+        }, {
+            threshold: 0,
+            rootMargin: "-70px 0px -30px 0px"
         });
-    }
-</script>
-<script>
-    const filterLinks = document.getElementsByClassName("tab-links");
-    const projectContainer = document.querySelector('.projects-wrapper');
-    const allCards = Array.from(document.getElementsByClassName("project-card"));
-
-    function filterTab(category) {
-        // Update active link styling
-        for (let link of filterLinks) {
-            link.classList.remove("active-link");
-        }
-        event.currentTarget.classList.add("active-link");
-
-        let cardsToShow = allCards;
-
-        if (category === 'All') {
-            // Sort descending by data-order (newest first)
-            cardsToShow = [...allCards].sort((a, b) => parseInt(b.dataset.order) - parseInt(a.dataset.order));
-        } else {
-            // Filter by category, preserve existing order
-            cardsToShow = allCards.filter(card => card.dataset.category === category);
         }
 
-        // Hide all cards
+        function filterTab(category, clickedEl) {
+        filterLinks.forEach(link => link.classList.remove("active-link"));
+        clickedEl.classList.add("active-link");
+
+        let cardsToShow = [...allCards];
+        if (category !== "All") {
+            cardsToShow = cardsToShow.filter(card => card.dataset.category === category);
+        }
+
+        cardsToShow.sort((a, b) => Number(b.dataset.order) - Number(a.dataset.order));
+
         allCards.forEach(card => {
             card.style.display = "none";
+            card.classList.remove("reveal-visible");
+            if (revealObserver) revealObserver.unobserve(card);
         });
 
-        // Append and show filtered cards in correct order
         cardsToShow.forEach(card => {
             card.style.display = "block";
             projectContainer.appendChild(card);
         });
-    }
-</script>
 
-<script>
-  // Scroll reveal (fade + pop-up) that repeats on scroll up/down
-  (function () {
-    const revealEls = document.querySelectorAll('.reveal');
-
-
-    // Fallback: if IntersectionObserver isn't supported, just show everything
-    if (!('IntersectionObserver' in window)) {
-      revealEls.forEach(el => el.classList.add('reveal-visible'));
-      return;
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-visible');
-        } else {
-          entry.target.classList.remove('reveal-visible');
+        requestAnimationFrame(() => {
+            cardsToShow.forEach(card => {
+            card.classList.remove("reveal-visible");
+            if (revealObserver) revealObserver.observe(card);
+            });
+        });
         }
-      });
-    }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -0px 0px'
-    });
 
-    revealEls.forEach(el => observer.observe(el));
-  })();
-</script>
+        window.addEventListener("DOMContentLoaded", () => {
+        initRevealObserver();
+        const allTab = filterLinks[0];
+        filterTab("All", allTab);
+        });
 
-
-
-</body>
+        // nav bar for small screen
+        var sidemenu = document.getElementById("menu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-170px";
+        }    
+    </script>
 </html>

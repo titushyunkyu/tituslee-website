@@ -1,183 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="canonical" href="https://tituslee.com" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6HJ0LZD7X"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <head>
 
-    gtag('config', 'G-L6HJ0LZD7X');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titus Lee - Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="https://kit.fontawesome.com/a024b6bda8.js" crossorigin="anonymous"></script>
-</head>
-<body>
-   <div id="header">
-    <img src="images/website portfolio.png" class="placeholder">
-    <div class="container container-logo">
-        <nav>
-            <img src="images/uva two lines logo.png" class="logo1">
-            <img src="images/csp logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-x" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-    </div>
-    <div class="header-text">
-        <h1>
-            <span class="typing-line1">Hi, I'm <span class="name">Titus Lee</span></span><br>
-            <span class="typing-line2">and this is my portfolio website.</span>
-        </h1>        
-        <a href="Titus Lee Resume.pdf" target = 'blank' class = "btn">Download Resume</a>
-        <a href="#header" class = "btn btn2"><i class="fa-solid fa-chevron-up"></i></a>    
-    </div>
-   </div> 
+        <!-- google tag -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6HJ0LZD7X"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-<!-- ABOUT PAGE --> 
-    <div id="about" class = "reveal">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <h2 class="subtitle" >About Me</h2>
-                    <p1>I'm an Electrical and Computer Engineering student at the University of Virginia, also pursuing a minor in engineering business. I'm also one of only 17 selected students in Cohort 6 of the A. James Clark Scholars Program at the University of Virginia. I'm excited to share my journey, projects, and experiences with you on this website. Thank you for stopping by, and I hope you enjoy learning more about me and my work.</p1>
-                    <div class="tab-titles">
-                        <p class = "tab-links active-link" onclick="opentab('skills')"><span>Skills</span></p>
-                        <p class = "tab-links" onclick="opentab('experience')"><span>Experiences</span></p>
-                        <p class = "tab-links" onclick="opentab('education')"><span>Education</span></p>
-                    </div>
-                    <div class="reveal tab-contents active-tab", id="skills">
-                        <ul>
-                            <li><span class = "role-title">Programming:</span>
-                                <span class = "role-content"><br>Python, Java, C, C++, VHDL, JavaScript, Bash, x86 Assembly.</span></li>
-                            <li><span class = "role-title">Simulation Tools:</span>
-                                <span class = "role-content"><br>Code Composer Studio, NI Multisim, KiCad, Quartus, LabVIEW, MATLAB,   AutoCAD, Fusion360.</span> </li>
-                            <li><span class = "role-title">Languages:</span>
-                                <span class = "role-content"><br>Korean (Native), English (Native).</span></li>
-                        </ul>
-                    </div>
-                    <div class="reveal tab-contents", id="experience">
-                        <ul>
-                            <li>
-                                <span class = "role-title">Embedded Systems Engineer (Industry Project)</span>
-                                <span class = "company"><br>Interel</span> 
-                                <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Dubai, UAE &emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;December 2025 - January 2026</span>
-                                <span class = "role-content"><br>Developed and evaluated an embedded sensing prototype for real-time smoking and vaping detection within a commercial smart device system.</span>
-                            </li>
-                            <li>
-                                <span class = "role-title">Research Intern</span>
-                                <span class = "company"><br>DGIST</span> 
-                                <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Daegu, South Korea &emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;June 2025 - August 2025</span>
-                                <span class = "role-content"><br>Designed and tested triboelectric nanogenerators (TENGs) using self-treated materials, integrating them into a functional motion-sensing system for energy-harvesting and real-time intrusion detection.</span>
-                            </li>
-                            <li>
-                                <span class = "role-title">Teaching Assistant (ECE 2700: Signals & Systems)</span>
-                                <span class = "company"><br>University of Virginia</span> 
-                                <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Charlottesville, Virginia &emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;August 2025 - Present</span>
-                                <span class = "role-content"><br>Supported instruction in signals and systems by assisting with problem-solving, concept reinforcement, and student understanding of core signal processing topics.</span>
-                            </li>
+        gtag('config', 'G-L6HJ0LZD7X');
+        </script>
 
-                        </ul>
-                    </div>
-                    <div class="reveal tab-contents", id="education">
-                        <ul>
-                            <li><span class = "role-title">University of Virginia </span>
-                                <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Charlottesville, Virginia&emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;August 2023 - May 2027</span>
-                                <span class = "role-content"><br>B.S. in Electrical Engineering and Computer Engineering, Minor in Engineering Business.</span>
-                            </li>
-                            <li><span class = "role-title">UVA in Guatemala</span>
-                                 <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Quetzaltenango, Guatemala&emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;Summer 2024</span>
-                                <span class = "role-content"><br>UVA Study Abroad - Completed STS 3500: Engineering, Public Health, and Development, focused on the intersection of infrastructure, health systems, and social impact.</span>
-                            </li>
+        <!-- setup -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Titus Lee - NEW Portfolio Website</title>
+        <link rel="stylesheet" href="base.css">
+        <link rel="stylesheet" href="home.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script src="https://kit.fontawesome.com/a024b6bda8.js" crossorigin="anonymous"></script>
 
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="reveal about-col-2">
-                    <img src="images/clark headshot.jpg">
-                </div>
+    </head>
+
+    <body>
+        <!-- header -->
+        <div id = "header">
+            <!-- placeholder image -->
+            <img src="images/website portfolio.png" class="placeholder">
+            <!-- top bar -->
+            <div id ="top-bar">
+                <nav>
+                    <img src="images/uva two lines logo.png" class="logo1">
+                    <img src="images/csp logo.png" class="logo2">
+                    <ul id="menu">
+                        <li></li>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li><i class="fa-solid fa-x" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+            </div>
+            <!-- header text -->
+            <div class="header-text">
+                <h1>
+                    <span class="typing-line1">Hi, I'm <span class="name">Titus Lee</span></span><br>
+                    <span class="typing-line2">and this is my portfolio website.</span>
+                </h1>        
+                <a href="Titus Lee Resume.pdf" target = 'blank' class = "btn resumebtn">Download Resume</a>
+                <a href="#header" class = "btn upbtn"><i class="fa-solid fa-chevron-up"></i></a>    
             </div>
         </div>
-    </div>
-<!-- ---------Contact------------ -->
-    <div id="contact">
-        <div class="container">
+
+        <!-- about me -->
+        <div id = "about" class = "reveal">
+            <section class = "container">
+                <div class = "row">
+                    <div class = "about-col-1">
+                        <h2>About Me</h2>
+                        <p1>I'm an Electrical and Computer Engineering student at the University of Virginia.
+                             Thank you for stopping by and I hope you enjoy learning more about me and my work. 
+                        </p1>
+                        <div class="tab-titles">
+                            <p class = "btn tab-links active-link" onclick="opentab('experience')"><span>Experience</span></p>
+                            <p class = "btn tab-links" onclick="opentab('education')"><span>Education</span></p>
+                            <p class = "btn tab-links" onclick="opentab('skills')"><span>Skills&nbsp;</span></p>
+                        </div>
+                        <div class="reveal tab-contents active-tab", id="experience">
+                            <ul>
+                                <li>
+                                    <span class = "role-title">Embedded Systems Engineer (Industry Project)</span>
+                                    <span class = "company"><br>Interel</span> 
+                                    <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Dubai, UAE &emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;December 2025 - January 2026</span>
+                                    <span class = "role-content"><br>Developed and evaluated an embedded sensing prototype for real-time smoking and vaping detection within a commercial smart device system.</span>
+                                </li>
+                                <li>
+                                    <span class = "role-title">Research Intern</span>
+                                    <span class = "company"><br>DGIST</span> 
+                                    <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Daegu, South Korea &emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;June 2025 - August 2025</span>
+                                    <span class = "role-content"><br>Designed and tested triboelectric nanogenerators (TENGs) using self-treated materials, integrating them into a real-time intrusion detection system.</span>
+                                </li>
+                                <li>
+                                    <span class = "role-title">Teaching Assistant (ECE 2700: Signals & Systems)</span>
+                                    <span class = "company"><br>University of Virginia</span> 
+                                    <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Charlottesville, Virginia &emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;August 2025 - Present</span>
+                                    <span class = "role-content"><br>Supported instruction in signals and systems by assisting with problem-solving, concept reinforcement, and student understanding of core signal processing topics.</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="reveal tab-contents", id="skills">
+                            <ul>
+                                <li><span class = "role-title">Programming:</span>
+                                    <span class = "role-content"><br>Python, Java, C, C++, VHDL, Verilog, JavaScript, Bash, x86 Assembly.</span></li>
+                                <li><span class = "role-title">Simulation Tools:</span>
+                                    <span class = "role-content"><br>CCS, NI Multisim, KiCad, Cadence, Quartus, LabVIEW, MATLAB.</span> </li>
+                                <li><span class = "role-title">Languages:</span>
+                                    <span class = "role-content"><br>Korean (Native), English (Native).</span></li>
+                            </ul>
+                        </div>
+                        <div class="reveal tab-contents", id="education">
+                            <ul>
+                                <li><span class = "role-title">University of Virginia </span>
+                                    <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Charlottesville, Virginia&emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;August 2023 - May 2027</span>
+                                    <span class = "role-content"><br>B.S. in Electrical Engineering and Computer Engineering, Minor in Engineering Business.</span>
+                                </li>
+                                <li><span class = "role-title">UVA in Guatemala</span>
+                                    <span class = "role-details">&emsp;<i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Quetzaltenango, Guatemala&emsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;Summer 2024</span>
+                                    <span class = "role-content"><br>UVA Study Abroad - Completed STS 3500: Engineering, Public Health, and Development, focused on the intersection of infrastructure, health systems, and social impact.</span>
+                                </li>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="reveal about-col-2">
+                        <img src="images/clark headshot.jpg">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- contact -->
+        <div id="contact">
             <div class="contact-info">
+                <h2>&nbsp;&nbsp;Contact&nbsp;&nbsp;</h2>
+                <p><span class = "last-comment">Feel free to reach out!</span></p>
                 <p><i class="fa-solid fa-envelope"></i> &nbsp;titushyunkyu1@gmail.com </p>
                 <p><i class="fa-solid fa-phone"></i> +1 (703) 909-7009 </p>                               
                 <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=100012169932242" target="_blank"><i class="fa-brands fa-facebook"></i>&nbsp;</a>
-                    <a href="https://www.instagram.com/hyun_kyu.l2/" target="_blank"><i class="fa-brands fa-instagram"></i>&nbsp;</a>
-                    <a href="https://www.linkedin.com/in/titushyunkyu/" target="_blank"><i class="fa-brands fa-linkedin"></i>&nbsp;</a>
-                    <a href="https://github.com/titushyunkyu" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100012169932242" target="_blank"><i class="btn social-btn fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/hyun_kyu.l2/" target="_blank"><i class="btn social-btn fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/titushyunkyu/" target="_blank"><i class="btn social-btn fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/titushyunkyu" target="_blank"><i class="btn social-btn fa-brands fa-github"></i></a>
                 </div>
-                <p><span class="end">Website made and designed by Titus Lee</span></p>
+                <p><span class = "end">Website made and designed by Titus Lee</span></p>
             </div>
         </div>
-    </div>
+    </body>
 
-<script>
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for (tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-</script>
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-
-</script>
-
-<script>
-    document.addEventListener('scroll', function() {
-        var scrollPosition = window.pageYOffset;
-        var fadeStart = 40; // Start fading in after 100px of scrolling
-        var fadeUntil = 500; // Finish fading in at 500px of scrolling
-        var fadeElement = document.body.style;
-    
-        if(scrollPosition <= fadeStart) {
-            fadeElement.setProperty('--fade-opacity', 0);
-        } else if(scrollPosition <= fadeUntil) {
-            var opacity = (scrollPosition - fadeStart) / (fadeUntil - fadeStart);
-            fadeElement.setProperty('--fade-opacity', opacity);
-        } else {
-            fadeElement.setProperty('--fade-opacity', 1);
-        }
-    });
-</script>
-
-<script>
+    <script>
+    // typing animation for header text
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         document.querySelector('.typing-line1').classList.add('done');
@@ -187,15 +152,13 @@
         document.querySelector('.typing-line2').classList.add('done');
       }, 7920);
     });
-</script>
 
-<script>
-  // Scroll reveal (fade + pop-up) that repeats on scroll up/down
-  (function () {
+    // scroll reveal
+    (function () {
     const revealEls = document.querySelectorAll('.reveal');
 
 
-    // Fallback: if IntersectionObserver isn't supported, just show everything
+    // fallback: just show everything
     if (!('IntersectionObserver' in window)) {
       revealEls.forEach(el => el.classList.add('reveal-visible'));
       return;
@@ -215,10 +178,31 @@
     });
 
     revealEls.forEach(el => observer.observe(el));
-  })();
+    })();
+
+  //about me tab links
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    // nav bar for small screen
+    var sidemenu = document.getElementById("menu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-170px";
+    }    
 </script>
-
-</body>
-
 </html>
-

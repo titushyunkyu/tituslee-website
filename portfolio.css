@@ -1,0 +1,94 @@
+#portfolio{
+    margin: 8% 13%;
+}
+.portfolio h1{
+    color: var(--highlight1);
+    font-size: 60px;
+}
+.tab-titles {
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    gap: 60px;
+    margin: 38px 10px;
+}
+.tab-links {
+    padding: 10px 25px;
+    cursor: pointer;
+    color: var(--text1);
+    border: 1px groove;
+    border-radius: 30px;
+    border-color: var(--highlight1);
+    box-shadow: var(--shadow1);
+}
+.tab-links.active-link{
+    background: linear-gradient(135deg, var(--highlight1), var(--highlight2));
+    border-color: transparent;
+}
+.container{
+    display: flex;
+    margin-bottom: 5%;
+    height:auto;
+    background: linear-gradient(135deg, var(--bg3), var(--bg4));
+}
+.container a{
+    font-size: 30px;
+    color: var(--text1);
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+.container p{
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--text2);
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.section-col-1{
+    flex-basis: 34%;
+    width: 100%;
+    margin: 3%;
+}
+.section-col-1 img{
+    width:100%;
+    border-radius: 15px;
+    border: ridge 2px;
+    position: relative;
+    border-color: var(--highlight1);
+    box-shadow: var(--shadow1);
+}
+.section-col-2{
+    flex-basis: 54%;
+    width:100%;
+    margin: 3%;
+}
+/* css for small screen */
+@media only screen and (max-width: 900px){
+    #portfolio{
+        margin: 20% 8%;
+    }
+    .portfolio h1{
+        font-size: 35px;
+    }
+    .tab-titles{
+        gap: 15px;
+        font-size: 15px;
+        margin: 30px 0px 40px;
+        justify-content: center;
+    }
+    .section-col-1, .section-col-2{
+        flex-basis: 100%;
+    }
+    .container a{
+        font-size: 16px;
+    }
+    .container p{
+        font-size: 15px;
+    }
+    .container{
+        margin-bottom: 10%;
+    }
+}
