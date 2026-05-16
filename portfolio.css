@@ -32,9 +32,9 @@
     background: linear-gradient(135deg, var(--bg3), var(--bg4));
 }
 .container a{
-    font-size: 30px;
+    font-size: 28px;
     color: var(--text1);
-    text-decoration: underline;
+    text-decoration: none;
     margin-bottom: 10px;
 }
 .container p{

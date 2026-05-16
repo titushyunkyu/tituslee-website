@@ -15,12 +15,10 @@
         <!-- setup -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Titus Lee - Portfolio Website</title>
-        <meta name="format-detection" content="telephone=no">
+        <title>Titus Lee - NEW Portfolio Website</title>
         <link rel="stylesheet" href="base.css">
         <link rel="stylesheet" href="portfolio.css">
-        <link rel="icon" type="image/png" sizes="48x48" href="/images/favicon.png">
-        <link rel="shortcut icon" href="/images/favicon.png">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script src="https://kit.fontawesome.com/a024b6bda8.js" crossorigin="anonymous"></script>
 
     </head>
@@ -50,9 +48,44 @@
             <h1>Project Portfolio</h1>
             <div class="tab-titles">
                 <p class="btn tab-links active-link" onclick="filterTab('All', this)"><span>&nbspAll&nbsp</span></p>
-                <p class="btn tab-links" onclick="filterTab('Software', this)"><span>Software</span></p>
                 <p class="btn tab-links" onclick="filterTab('Hardware', this)"><span>Hardware</span></p>
+                <p class="btn tab-links" onclick="filterTab('Software', this)"><span>Software</span></p>
             </div>
+            <!-- vlsi sram project -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Hardware" data-order="12">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/vlsischematic.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="images/Neveractive__LLC_Design_Report.pdf" target="_blank" class="btn">Low-Power 1Mb SRAM Design - Cadence &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>Designed and verified a 1 Mb low-power SRAM in FreePDK 45nm technology using a hierarchical 
+                            16-bank architecture with 6T bitcells, row/column decoding, sense amplifiers, write drivers, 
+                            pass-gate output multiplexing, and an output latch. Implemented selective enabling to reduce 
+                            unnecessary switching activity and added MTCMOS leakage reduction for inactive decoder logic. 
+                            Verified read/write functionality through transistor-level simulations, RC-pi simulation models, 
+                            and PVT corner testing.
+                            </p>
+                    </div>
+                </div>
+            </section>
+            <!-- riscv-32i cpu project -->
+            <section class = "container reveal project-card tab-contents active-tab" data-category="Hardware" data-order="12">
+                <div class="row">
+                    <div class="section-col-1">
+                        <img src="images/RISCV-cpu.png">
+                    </div>
+                    <div class = section-col-2>
+                        <h2><a href="https://github.com/titushyunkyu/riscv-32i-cpu.git" target="_blank" class="btn">Pipelined RISC-V CPU - Verilog / Quartus &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                            <p>Designed and verified a RISC-V 32I CPU in Verilog, progressing from core datapath and control logic
+                            to a five-stage pipelined implementation. Implemented pipeline registers across the Fetch, Decode,
+                            Execute, Memory, and Writeback stages, along with hazard handling for register forwarding, load-use
+                            stalls, and branch flushes. Verified full CPU functionality in ModelSim using custom RISC-V assembly
+                            tests for arithmetic, logic, shifting, comparisons, load/store operations, jumps, and branches.
+                            </p>
+                    </div>
+                </div>
+            </section>
             <!-- micro audio synthesizer -->
             <section class = "container reveal project-card tab-contents active-tab" data-category="Hardware" data-order="11">
                 <div class="row">
@@ -60,7 +93,7 @@
                         <img src="images/audio synthesizer.jpg">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="images/Audio_Synthesizer_Project_Report.pdf" target="_blank" class="btn">Audio Synthesizer PCB - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="images/Audio_Synthesizer_Project_Report.pdf" target="_blank" class="btn">Audio Synthesizer PCB - KiCad / Multisim&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>Designed and built an audio synthesizer using a fully discrete BJT-based operational 
                                 amplifier with a PNP differential input stage, active-load voltage gain stage with Miller 
                                 compensation, and complementary class-AB output buffers. Configured the amplifier as a relaxation 
@@ -76,7 +109,7 @@
                         <img src="images/embedded final.jpg">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="https://github.com/titushyunkyu/Embedded-Music-Player" target="_blank" class="btn">Embedded Music Player - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="https://github.com/titushyunkyu/Embedded-Music-Player" target="_blank" class="btn">Embedded Music Player - C / MSPM0 &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>Developed an embedded music player on the TI MSPM0G3507 LaunchPad with the BOOSTXL-EDUMKII 
                                 BoosterPack using C and bare-metal programming. Implemented PWM-based audio generation using 
                                 hardware timers and prescalers to play a predefined song on the buzzer, and designed a finite 
@@ -94,7 +127,7 @@
                         <img src="images/course review.png">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="https://github.com/titushyunkyu/course-review-application" target="_blank" class="btn">Course Review App - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="https://github.com/titushyunkyu/course-review-application" target="_blank" class="btn">Course Review App - Java / SQLite &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>JavaFX desktop CRUD application built using an MVC architecture with JDBC-based SQLite persistence. 
                                 Supports user authentication, course creation, flexible course search, and anonymous course reviews 
                                 with aggregated ratings and timestamped updates. I implemented the course reviews scene, handled review 
@@ -110,7 +143,7 @@
                         <img src="images/audio-analyzer.jpg">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="images/Audio_Analyzer_Project_Report.pdf" target="_blank" class="btn">Audio Analyzer PCB - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="images/Audio_Analyzer_Project_Report.pdf" target="_blank" class="btn">Audio Analyzer PCB - KiCad / Multisim&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>This project involved designing and building an audio analyzer PCB that lights up LEDs in real time based on 
                                 audio input. By combining a summing amplifier, high-pass and low-pass filters, peak detectors, and two types 
                                 of LED drivers (analog and PWM), the system separates audio into treble and bass frequencies. The circuit 
@@ -127,7 +160,7 @@
                         <img src="images/voice-isolation.png">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="https://github.com/titushyunkyu/vocal-isolation-signal-processing" target="_blank" class="btn">Vocal Isolation App - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="https://github.com/titushyunkyu/vocal-isolation-signal-processing" target="_blank" class="btn">Vocal Isolation App - Python &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>This project applies signal processing techniques to isolate vocals from a mixed audio track using spectral gating 
                                 and harmonic/percussive source separation (HPSS). The method leverages time-frequency analysis to suppress 
                                 background instrumentation while enhancing vocal content. Spectral gating is used to attenuate non-vocal 
@@ -143,7 +176,7 @@
                         <img src="images/scouting-tool.png">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="https://github.com/titushyunkyu/FIFA-Scouting-Recommender" target="_blank" class="btn">FIFA Scouting Recommender - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="https://github.com/titushyunkyu/FIFA-Scouting-Recommender" target="_blank" class="btn">FIFA Scouting Recommender - Python &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                         <p>This project is a machine learning tool that helps soccer managers find affordable players with 
                             similar attributes to elite stars using the FIFA 2024 dataset. It combines K-Nearest Neighbors 
                             with clustering algorithms (K-Means and HDBSCAN) to group players by playstyle and recommend 
@@ -160,7 +193,7 @@
                         <img src="images/pcb.png">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="images/Boost_Converter_Project_Report.pdf" target="_blank" class="btn">Boost Converter Circuit - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="images/Boost_Converter_Project_Report.pdf" target="_blank" class="btn">Boost Converter Circuit - KiCad / Multisim &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>As part of my applied circuits coursework, I designed, simulated, and constructed a boost 
                                 converter circuit to step up a 5V supply voltage to a stable 14.11V output. I completed the 
                                 full design cycle, including schematic creation and PCB layout in KiCad, ordering the PCB, 
@@ -177,7 +210,7 @@
                         <img src="images/8-bit cpu.png">
                     </div>
                     <div class = section-col-2>
-                         <h2><a href="https://github.com/titushyunkyu/8-bit-cpu/tree/main" target="_blank" class="btn">8-bit CPU - Hardware &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                         <h2><a href="https://github.com/titushyunkyu/8-bit-cpu/tree/main" target="_blank" class="btn">8-bit CPU - VHDL / Quartus &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>The CPU features a 5-bit address bus with access to 32 memory locations and supports operations 
                                 such as load, store, addition, subtraction, and branching. The simple_cpu module integrates an 
                                 opcode decoder, instruction sequencer, control signals logic, and a datapath. The datapath 
@@ -194,7 +227,7 @@
                         <img src="images/EPL Match Predictor.png">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="https://github.com/titushyunkyu/EPL-match-predictor" target="_blank" class="btn">EPL Match Predictor - Software &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="https://github.com/titushyunkyu/EPL-match-predictor" target="_blank" class="btn">EPL Match Predictor - Python &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>This project is an advanced machine learning project designed to predict the outcomes of English 
                                 Premier League matches. The project encompasses a comprehensive web scraper that collects 
                                 historical and future match data from the web, ensuring the model is trained on the most 
@@ -212,7 +245,7 @@
                         <img src="images/wordle solver.png">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="https://github.com/titushyunkyu/wordle-solver" target="_blank" class="btn">Wordle Solver - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="https://github.com/titushyunkyu/wordle-solver" target="_blank" class="btn">Wordle Solver - Python &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>This project is a Python-based Wordle solver that uses information theory concepts such as 
                                 entropy and probability to recommend the best possible guesses. This solver aims to efficiently 
                                 solve Wordle puzzles by calculating the information gain of each guess and selecting the 
@@ -228,7 +261,7 @@
                         <img src="images/website portfolio.png">
                     </div>
                     <div class = section-col-2>
-                        <h2><a href="https://github.com/titushyunkyu/tituslee-website" target="_blank" class="btn">Personal Portfolio Website - Software&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
+                        <h2><a href="https://github.com/titushyunkyu/tituslee-website" target="_blank" class="btn">Personal Portfolio Website - HTML / CSS / JS &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a></h2>
                             <p>This project is my personal, professional portfolio website, which is the very website you are 
                                 currently on. This website was created using HTML, CSS, and JavaScript. The server is hosted 
                                 through GitHub, and the domain is registered and bought through Namecheap.</p>
@@ -326,5 +359,4 @@
             sidemenu.style.right = "-170px";
         }    
     </script>
-
 </html>
