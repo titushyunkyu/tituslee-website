@@ -6,8 +6,8 @@
 
 
 :root {
-  --paper:      #fffaedc5;
-  --plate:      #F3F3EF;
+  --paper:      #edebe2;
+  --plate:      #f1f1e9;
   --inset:      #DCDCD5;
   --rule:       #c7c1c0;
   --rule-soft:  #D5D6CF;
@@ -33,7 +33,7 @@
 }
 
 [data-theme="dark"] {
-  --paper:      #131414;
+  --paper:      #1c1d1d;
   --plate:      #1B1D1D;
   --inset:      #242726;
   --rule:       #323634;
@@ -516,12 +516,17 @@ h1, h2, h3 {
 
 /* ------------------------------------------------------- motion / reveal -- */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .7s var(--ease), transform .7s var(--ease);
+.reveal { opacity: 0; }
+
+.reveal.is-in {
+  opacity: 1;
+  animation: reveal-in 1s var(--ease) var(--reveal-d, 0ms) backwards;
 }
-.reveal.is-in { opacity: 1; transform: none; }
+
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 .rise { opacity: 0; transform: translateY(18px); }
 .js-ready .rise {

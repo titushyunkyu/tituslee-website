@@ -165,12 +165,13 @@
     items.forEach(function (el) { el.classList.add("is-in"); });
   } else {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
+      var batch = entries.filter(function (e) { return e.isIntersecting; });
+      batch.forEach(function (entry, i) {
+        entry.target.style.setProperty("--reveal-d", (i * 90) + "ms");
         entry.target.classList.add("is-in");
-        io.unobserve(entry.target);        /* reveal once, then leave it alone */
+        io.unobserve(entry.target);
       });
-    }, { threshold: 0.08, rootMargin: "0px 0px -60px 0px" });
+    }, { threshold: 0.05, rootMargin: "0px 0px -10% 0px" });
     items.forEach(function (el) { io.observe(el); });
   }
 
