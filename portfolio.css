@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Titus Lee — portfolio.css
+   ========================================================================== */
+
+.masthead {
+  padding-block: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.masthead h1 {
+  font-size: clamp(2.4rem, 6.5vw, 4.5rem);
+  font-variation-settings: "wdth" 112;
+  line-height: .97;
+  letter-spacing: -.028em;
+  margin-block: clamp(1rem, 2vw, 1.35rem) 1rem;
+}
+
+.masthead p {
+  color: var(--graphite);
+  max-width: 64ch;
+  font-size: 1.1rem;
+}
+
+/* ----------------------------------------------------------------- filter -- */
+
+.filter {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55rem;
+  padding-block: 1rem;
+  background: var(--paper);
+  border-block: 1px solid var(--rule);
+}
+
+.filter__label {
+  font-family: var(--mono);
+  font-size: .655rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--graphite);
+  margin-right: .4rem;
+}
+
+.filter__count {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--graphite);
+}
+@media (max-width: 640px) { .filter__count { display: none; } }
+
+/* ---------------------------------------------------------------- projects -- */
+
+.projects {
+  display: grid;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  padding-block: clamp(2.25rem, 4.5vw, 3.5rem) 0;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: clamp(300px, 36%, 560px) minmax(0, 1fr);
+  background: var(--plate);
+  border: 1px solid var(--rule);
+  scroll-margin-top: calc(var(--nav-h) + 90px);
+  transition: border-color .3s var(--ease), transform .3s var(--ease);
+}
+.project[hidden] { display: none; }
+.project:hover { border-color: var(--copper); transform: translateY(-3px); }
+
+/* The screenshots range from 1.44:1 to 2.46:1, so no single crop box suits
+   them all. Instead of letterboxing against a contrasting plate, the figure
+   shares the card background and pads the image — any leftover room reads as
+   margin rather than dead space. */
+.project__figure {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.1rem, 1.8vw, 1.75rem);
+  background: var(--plate);
+  overflow: hidden;
+}
+
+.project__figure img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border: 1px solid var(--rule-soft);
+  transition: transform .6s var(--ease);
+}
+.project:hover .project__figure img { transform: scale(1.02); }
+
+.project__body {
+  padding: clamp(1.35rem, 2.2vw, 2.1rem);
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* stop the category tag stretching the full width */
+  gap: .8rem;
+}
+
+.project__title {
+  font-size: clamp(1.2rem, 1.75vw, 1.5rem);
+  font-variation-settings: "wdth" 104;
+  line-height: 1.22;
+  letter-spacing: -.016em;
+}
+.project__title a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: baseline;
+  gap: .55rem;
+  transition: color .25s var(--ease);
+}
+.project__title a:hover { color: var(--copper-ink); }
+.project__title svg { width: 13px; height: 13px; flex: none; align-self: center; }
+
+.project__desc {
+  color: var(--graphite);
+  font-size: .955rem;
+  line-height: 1.65;
+  max-width: 78ch;
+}
+
+.project__link {
+  margin-top: auto;
+  padding-top: .35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: .69rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--copper-ink);
+  border-bottom: 1px solid transparent;
+  transition: border-color .25s var(--ease);
+}
+.project__link:hover { border-bottom-color: var(--copper); }
+.project__link svg { width: 12px; height: 12px; }
+
+@media (max-width: 860px) {
+  .project { grid-template-columns: 1fr; }
+  .project__figure { padding-bottom: 0; }
+  .project__body { padding-left: clamp(1.35rem, 2.2vw, 2.1rem); }
+  .project__figure img { max-height: 260px; }
+}
+
+.empty {
+  padding: clamp(3rem, 8vw, 5rem) 0;
+  text-align: center;
+  color: var(--graphite);
+  font-family: var(--mono);
+  font-size: .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.empty[hidden] { display: none; }

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Titus Lee - Portfolio Website</title>
+<meta name="description" content="Portfolio website of Titus Lee, an Electrical and Computer Engineering student at the University of Virginia.">
+<meta name="format-detection" content="telephone=no">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tituslee.com/">
+<meta property="og:title" content="Titus Lee - Portfolio Website">
+<meta property="og:description" content="Portfolio website of Titus Lee, an Electrical and Computer Engineering student at the University of Virginia.">
+<meta property="og:image" content="https://tituslee.com/images/vlsischematic.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="home.css">
+
+<!-- set theme before first paint so there is no flash -->
+<script>
+(function(){try{var t=localStorage.getItem('theme');
+if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}
+else if(matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}
+}catch(e){}})();
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L6HJ0LZD7X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-L6HJ0LZD7X');
+</script>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.2v2.4M12 19.4v2.4M2.2 12h2.4M19.4 12h2.4M5.1 5.1l1.7 1.7M17.2 17.2l1.7 1.7M18.9 5.1l-1.7 1.7M6.8 17.2l-1.7 1.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.4 14.8A8.6 8.6 0 019.2 3.6a8.6 8.6 0 1011.2 11.2z" fill="currentColor"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 011.141.195v3.325a8.623 8.623 0 00-.653-.036 26.805 26.805 0 00-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 00-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647z"/></symbol>
+</svg>
+<!-- nav -->
+<header class="nav">
+  <div class="shell nav__inner">
+    <a class="wordmark" href="index.html">Titus Lee</a>
+
+    <nav id="nav-links" class="nav__links" aria-label="Primary">
+      <button class="icon-btn nav__close" data-nav-close aria-label="Close menu">
+        <svg aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+      <a href="#header" aria-current="page">Home</a>
+      <a href="#about">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav__tools">
+      <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+        <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <button class="icon-btn nav__burger" data-nav-open aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav__scrim"></div>
+
+<main id="main">
+
+  <!-- hero -->
+  <section class="hero" id="header">
+    <div class="shell">
+      <p class="eyebrow hero__eyebrow rise" style="--d:80ms">Electrical &amp; Computer Engineering &middot; University of Virginia</p>
+
+      <h1 class="rise" data-type style="--d:180ms">
+        <span class="sr-only">Hi, I&rsquo;m Titus Lee and this is my portfolio website.</span>
+        <span class="type__ghost" aria-hidden="true">Hi, I&rsquo;m <span class="name">Titus Lee</span><span class="line2">and this is my portfolio website.</span></span>
+        <span class="type__live" aria-hidden="true"></span>
+      </h1>
+
+      <div class="hero__actions rise" style="--d:340ms">
+        <a class="btn btn--solid" href="Titus%20Lee%20Resume.pdf" target="_blank" rel="noopener">
+          Download Resume <svg aria-hidden="true"><use href="#i-download"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="portfolio.html">
+          View Portfolio <svg aria-hidden="true"><use href="#i-right"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="section" id="about">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about__lede reveal">
+        <figure class="about__figure">
+          <div class="frame">
+            <img src="images/clark%20headshot.jpg" alt="Portrait of Titus Lee" width="600" height="750">
+          </div>
+          <figcaption>Charlottesville, Virginia</figcaption>
+        </figure>
+
+        <p class="about__intro">
+          I&rsquo;m an Electrical and Computer Engineering student at the University of Virginia.
+          Thank you for stopping by and I hope you enjoy learning more about me and my work.
+        </p>
+      </div>
+
+      <div class="tabs reveal">
+        <div class="chips tabs__list" role="tablist" aria-label="Background">
+          <button class="chip" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="true">Experience</button>
+          <button class="chip" role="tab" id="tab-education"  aria-controls="panel-education"  aria-selected="false" tabindex="-1">Education</button>
+          <button class="chip" role="tab" id="tab-skills"     aria-controls="panel-skills"     aria-selected="false" tabindex="-1">Skills</button>
+        </div>
+
+        <div class="tabs__panel" role="tabpanel" id="panel-experience" aria-labelledby="tab-experience">
+  
+          <div class="entry">
+            <div class="entry__when">June 2026 &ndash; August 2026</div>
+            <div>
+              <h3 class="entry__role">Software Engineering Intern</h3>
+              <p class="entry__org">General Atomics <span class="where">&mdash; Herndon, Virginia</span></p>
+            </div>
+            <p class="entry__note">Developed embedded flight-software tooling for CI/CD automation, binary command and telemetry analysis, and end-to-end hardware communications integration.</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry__when">December 2025 &ndash; January 2026</div>
+            <div>
+              <h3 class="entry__role">Embedded Systems Engineer (Industry Project)</h3>
+              <p class="entry__org">Interel <span class="where">&mdash; Dubai, UAE</span></p>
+            </div>
+            <p class="entry__note">Developed and evaluated an embedded sensing prototype for real-time smoking and vaping detection within a commercial smart device system.</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry__when">June 2025 &ndash; August 2025</div>
+            <div>
+              <h3 class="entry__role">Research Intern</h3>
+              <p class="entry__org">DGIST <span class="where">&mdash; Daegu, South Korea</span></p>
+            </div>
+            <p class="entry__note">Designed and tested triboelectric nanogenerators (TENGs) using self-treated materials, integrating them into a real-time intrusion detection system.</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry__when">August 2025 &ndash; May 2026</div>
+            <div>
+              <h3 class="entry__role">Teaching Assistant (ECE 2700: Signals &amp; Systems)</h3>
+              <p class="entry__org">University of Virginia <span class="where">&mdash; Charlottesville, Virginia</span></p>
+            </div>
+            <p class="entry__note">Supported Signals &amp; Systems instruction through office hours, problem-solving, and reinforcement of Fourier, convolution, and LTI concepts.</p>
+          </div>
+        </div>
+
+        <div class="tabs__panel" role="tabpanel" id="panel-education" aria-labelledby="tab-education" hidden>
+          <div class="entry">
+            <div class="entry__when">August 2023 &ndash; May 2027</div>
+            <div>
+              <h3 class="entry__role">University of Virginia</h3>
+              <p class="entry__org">B.S. Electrical and Computer Engineering <span class="where">&mdash; Charlottesville, Virginia</span></p>
+            </div>
+            <p class="entry__note">B.S. in Electrical Engineering and Computer Engineering, Minor in Engineering Business.</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry__when">Summer 2024</div>
+            <div>
+              <h3 class="entry__role">UVA in Guatemala</h3>
+              <p class="entry__org">Study Abroad <span class="where">&mdash; Quetzaltenango, Guatemala</span></p>
+            </div>
+            <p class="entry__note">UVA Study Abroad &ndash; Completed STS 3500: Engineering, Public Health, and Development, focused on the intersection of infrastructure, health systems, and social impact.</p>
+          </div>
+        </div>
+
+        <div class="tabs__panel" role="tabpanel" id="panel-skills" aria-labelledby="tab-skills" hidden>
+          <div class="entry entry--wide">
+            <div class="entry__when">Programming</div>
+            <div class="entry__list">
+              <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span>
+              <span class="tag">C++</span><span class="tag">VHDL</span><span class="tag">Verilog</span>
+              <span class="tag">JavaScript</span><span class="tag">Bash</span><span class="tag">x86 Assembly</span>
+            </div>
+          </div>
+
+          <div class="entry entry--wide">
+            <div class="entry__when">Simulation Tools</div>
+            <div class="entry__list">
+              <span class="tag">CCS</span><span class="tag">NI Multisim</span><span class="tag">KiCad</span>
+              <span class="tag">Cadence</span><span class="tag">Quartus</span><span class="tag">LabVIEW</span>
+              <span class="tag">MATLAB</span>
+            </div>
+          </div>
+
+          <div class="entry entry--wide">
+            <div class="entry__when">Languages</div>
+            <div class="entry__list">
+              <span class="tag">Korean (Native)</span><span class="tag">English (Native)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- contact -->
+<footer class="footer" id="contact">
+  <div class="shell">
+    <div class="footer__grid">
+      <div class="reveal">
+        <h2>Contact</h2>
+        <p class="footer__lead">Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-list reveal">
+        <a href="mailto:titushyunkyu1@gmail.com">
+          <span class="k">Email</span>
+          <span class="v">titushyunkyu1@gmail.com</span>
+          <svg class="arrow" width="13" height="13" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="tel:+17039097009">
+          <span class="k">Phone</span>
+          <span class="v">+1 (703) 909-7009</span>
+          <svg class="arrow" width="13" height="13" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/titushyunkyu/" target="_blank" rel="noopener">
+          <span class="k">LinkedIn</span>
+          <span class="v">in/titushyunkyu</span>
+          <svg class="arrow" width="13" height="13" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="https://github.com/titushyunkyu" target="_blank" rel="noopener">
+          <span class="k">GitHub</span>
+          <span class="v">titushyunkyu</span>
+          <svg class="arrow" width="13" height="13" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <div class="contact-row">
+          <span class="k">Social</span>
+          <span class="contact-row__icons">
+            <a href="https://www.facebook.com/profile.php?id=100012169932242" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+            <a href="https://www.instagram.com/hyun_kyu.l2/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="affiliations reveal">
+      <img class="logo-uva" src="images/uva%20two%20lines%20logo.png" alt="University of Virginia School of Engineering and Applied Science">
+      <img class="logo-csp" src="images/csp%20logo.png" alt="Clark Scholars Program">
+    </div>
+
+    <div class="colophon">
+      <span>&copy; <span data-year>2026</span> Titus Lee</span>
+      <span>Website made and designed by Titus Lee</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

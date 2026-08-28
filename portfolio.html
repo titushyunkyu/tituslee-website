@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Titus Lee - Project Portfolio</title>
+<meta name="description" content="Hardware and software projects by Titus Lee, an Electrical and Computer Engineering student at the University of Virginia.">
+<meta name="format-detection" content="telephone=no">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tituslee.com/portfolio.html">
+<meta property="og:title" content="Titus Lee - Project Portfolio">
+<meta property="og:description" content="Hardware and software projects by Titus Lee, an Electrical and Computer Engineering student at the University of Virginia.">
+<meta property="og:image" content="https://tituslee.com/images/vlsischematic.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="portfolio.css">
+
+<!-- set theme before first paint so there is no flash -->
+<script>
+(function(){try{var t=localStorage.getItem('theme');
+if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}
+else if(matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.setAttribute('data-theme','dark');}
+}catch(e){}})();
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L6HJ0LZD7X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-L6HJ0LZD7X');
+</script>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.2v2.4M12 19.4v2.4M2.2 12h2.4M19.4 12h2.4M5.1 5.1l1.7 1.7M17.2 17.2l1.7 1.7M18.9 5.1l-1.7 1.7M6.8 17.2l-1.7 1.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.4 14.8A8.6 8.6 0 019.2 3.6a8.6 8.6 0 1011.2 11.2z" fill="currentColor"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 19h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm7.846-10.405a1.441 1.441 0 01-2.88 0 1.44 1.44 0 012.88 0z"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 011.141.195v3.325a8.623 8.623 0 00-.653-.036 26.805 26.805 0 00-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 00-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647z"/></symbol>
+</svg>
+<!-- nav -->
+<header class="nav">
+  <div class="shell nav__inner">
+    <a class="wordmark" href="index.html">Titus Lee</a>
+
+    <nav id="nav-links" class="nav__links" aria-label="Primary">
+      <button class="icon-btn nav__close" data-nav-close aria-label="Close menu">
+        <svg aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+      <a href="index.html#header">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="portfolio.html" aria-current="page">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav__tools">
+      <button class="icon-btn" data-theme-toggle aria-label="Switch theme">
+        <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <button class="icon-btn nav__burger" data-nav-open aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="nav__scrim"></div>
+
+<main id="main">
+
+  <section class="masthead">
+    <div class="shell">
+      <p class="eyebrow rise" style="--d:60ms">13 Projects</p>
+      <h1 class="rise" style="--d:150ms">Project Portfolio</h1>
+      <p class="rise" style="--d:280ms">
+        A selection of my hardware and software projects. Each one links to its
+        repository or design report.
+      </p>
+    </div>
+  </section>
+
+  <div class="shell">
+    <div class="filter">
+      <span class="filter__label">Filter</span>
+      <button class="chip" data-filter="All" aria-pressed="true">All</button>
+      <button class="chip" data-filter="Hardware" aria-pressed="false">Hardware</button>
+      <button class="chip" data-filter="Software" aria-pressed="false">Software</button>
+      <span class="filter__count" data-count>13 Projects</span>
+    </div>
+
+    <div class="projects">
+      <article class="project reveal" data-category="Hardware" data-order="12">
+        <figure class="project__figure">
+          <img src="images/vlsischematic.png" alt="Cadence schematic of the low-power 1Mb SRAM design" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Hardware</span>
+          <h2 class="project__title">
+            <a href="images/Neveractive__LLC_Design_Report.pdf" target="_blank" rel="noopener">Low-Power 1Mb SRAM Design &ndash; Cadence<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">Designed and verified a 1 Mb low-power SRAM in FreePDK 45nm technology using a hierarchical 16-bank architecture with 6T bitcells, row/column decoding, sense amplifiers, write drivers, pass-gate output multiplexing, and an output latch. Implemented selective enabling to reduce unnecessary switching activity and added MTCMOS leakage reduction for inactive decoder logic. Verified read/write functionality through transistor-level simulations, RC-pi simulation models, and PVT corner testing.</p>
+          <a class="project__link" href="images/Neveractive__LLC_Design_Report.pdf" target="_blank" rel="noopener">View Report <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Hardware" data-order="12">
+        <figure class="project__figure">
+          <img src="images/RISCV-cpu.png" alt="Block diagram of the pipelined RISC-V CPU" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Hardware</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/riscv-32i-cpu.git" target="_blank" rel="noopener">Pipelined RISC-V CPU &ndash; Verilog / Quartus<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">Designed and verified a RISC-V 32I CPU in Verilog, progressing from core datapath and control logic to a five-stage pipelined implementation. Implemented pipeline registers across the Fetch, Decode, Execute, Memory, and Writeback stages, along with hazard handling for register forwarding, load-use stalls, and branch flushes. Verified full CPU functionality in ModelSim using custom RISC-V assembly tests for arithmetic, logic, shifting, comparisons, load/store operations, jumps, and branches.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/riscv-32i-cpu.git" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Hardware" data-order="11">
+        <figure class="project__figure">
+          <img src="images/audio%20synthesizer.jpg" alt="Assembled audio synthesizer PCB" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Hardware</span>
+          <h2 class="project__title">
+            <a href="images/Audio_Synthesizer_Project_Report.pdf" target="_blank" rel="noopener">Audio Synthesizer PCB &ndash; KiCad / Multisim<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">Designed and built an audio synthesizer using a fully discrete BJT-based operational amplifier with a PNP differential input stage, active-load voltage gain stage with Miller compensation, and complementary class-AB output buffers. Configured the amplifier as a relaxation oscillator using combined positive and negative feedback to generate ~260 Hz&ndash;1 kHz tones with potentiometer-controlled frequency and volume, directly driving an 8 &Omega; speaker.</p>
+          <a class="project__link" href="images/Audio_Synthesizer_Project_Report.pdf" target="_blank" rel="noopener">View Report <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Hardware" data-order="10">
+        <figure class="project__figure">
+          <img src="images/embedded%20final.jpg" alt="TI MSPM0 LaunchPad running the embedded music player" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Hardware</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/Embedded-Music-Player" target="_blank" rel="noopener">Embedded Music Player &ndash; C / MSPM0<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">Developed an embedded music player on the TI MSPM0G3507 LaunchPad with the BOOSTXL-EDUMKII BoosterPack using C and bare-metal programming. Implemented PWM-based audio generation using hardware timers and prescalers to play a predefined song on the buzzer, and designed a finite state machine (FSM) to handle play/pause control via push buttons while displaying real-time note information on the LCD. Configured peripherals by referencing microcontroller and peripheral datasheets, integrating timers, GPIO, PWM, and LCD interfaces to demonstrate low-level firmware development and real-time embedded system design.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/Embedded-Music-Player" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Software" data-order="9">
+        <figure class="project__figure">
+          <img src="images/course%20review.png" alt="Screenshot of the course review desktop application" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Software</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/course-review-application" target="_blank" rel="noopener">Course Review App &ndash; Java / SQLite<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">JavaFX desktop CRUD application built using an MVC architecture with JDBC-based SQLite persistence. Supports user authentication, course creation, flexible course search, and anonymous course reviews with aggregated ratings and timestamped updates. I implemented the course reviews scene, handled review create/edit/delete logic, enforced single-review constraints per user, and contributed to debugging and validation.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/course-review-application" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Hardware" data-order="8">
+        <figure class="project__figure">
+          <img src="images/audio-analyzer.jpg" alt="Audio analyzer PCB with LEDs responding to audio input" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Hardware</span>
+          <h2 class="project__title">
+            <a href="images/Audio_Analyzer_Project_Report.pdf" target="_blank" rel="noopener">Audio Analyzer PCB &ndash; KiCad / Multisim<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">This project involved designing and building an audio analyzer PCB that lights up LEDs in real time based on audio input. By combining a summing amplifier, high-pass and low-pass filters, peak detectors, and two types of LED drivers (analog and PWM), the system separates audio into treble and bass frequencies. The circuit lights up green LEDs for high-pitched sounds (e.g., snares, guitar solos) and red LEDs for bass (e.g., kicks), providing a real-time visual representation of music. I tested the system with &ldquo;Seven Nation Army&rdquo; and verified the response using simulations and physical measurements.</p>
+          <a class="project__link" href="images/Audio_Analyzer_Project_Report.pdf" target="_blank" rel="noopener">View Report <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Software" data-order="7">
+        <figure class="project__figure">
+          <img src="images/voice-isolation.png" alt="Waveform plots from the vocal isolation project" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Software</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/vocal-isolation-signal-processing" target="_blank" rel="noopener">Vocal Isolation App &ndash; Python<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">This project applies signal processing techniques to isolate vocals from a mixed audio track using spectral gating and harmonic/percussive source separation (HPSS). The method leverages time-frequency analysis to suppress background instrumentation while enhancing vocal content. Spectral gating is used to attenuate non-vocal frequency bins, while HPSS cleanly separates harmonic (e.g., vocals, synths) and percussive (e.g., drums) components.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/vocal-isolation-signal-processing" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Software" data-order="6">
+        <figure class="project__figure">
+          <img src="images/scouting-tool.png" alt="Cluster visualisation from the FIFA scouting recommender" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Software</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/FIFA-Scouting-Recommender" target="_blank" rel="noopener">FIFA Scouting Recommender &ndash; Python<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">This project is a machine learning tool that helps soccer managers find affordable players with similar attributes to elite stars using the FIFA 2024 dataset. It combines K-Nearest Neighbors with clustering algorithms (K-Means and HDBSCAN) to group players by playstyle and recommend hidden talent. PCA visualizations and silhouette scores assess cluster quality. This project highlights my skills in data preprocessing, clustering, and visual analytics with scikit-learn and matplotlib.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/FIFA-Scouting-Recommender" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Hardware" data-order="5">
+        <figure class="project__figure">
+          <img src="images/pcb.png" alt="Boost converter printed circuit board" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Hardware</span>
+          <h2 class="project__title">
+            <a href="images/Boost_Converter_Project_Report.pdf" target="_blank" rel="noopener">Boost Converter Circuit &ndash; KiCad / Multisim<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">As part of my applied circuits coursework, I designed, simulated, and constructed a boost converter circuit to step up a 5V supply voltage to a stable 14.11V output. I completed the full design cycle, including schematic creation and PCB layout in KiCad, ordering the PCB, soldering components, and implementing the circuit. A 555 timer generated a PWM signal with a 78% duty cycle at 1 kHz to drive the MOSFET, enabling efficient energy storage and voltage regulation.</p>
+          <a class="project__link" href="images/Boost_Converter_Project_Report.pdf" target="_blank" rel="noopener">View Report <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Hardware" data-order="4">
+        <figure class="project__figure">
+          <img src="images/8-bit%20cpu.png" alt="Schematic of the 8-bit CPU designed in VHDL" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Hardware</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/8-bit-cpu/tree/main" target="_blank" rel="noopener">8-bit CPU &ndash; VHDL / Quartus<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">The CPU features a 5-bit address bus with access to 32 memory locations and supports operations such as load, store, addition, subtraction, and branching. The simple_cpu module integrates an opcode decoder, instruction sequencer, control signals logic, and a datapath. The datapath includes an ALU (with an adder-subtractor and full-adder), a parser, tri-state buffers, and a zero flag. Custom assembly code was programmed and tested using Quartus&rsquo; simulation tools and a hierarchical testbench to ensure functionality.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/8-bit-cpu/tree/main" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Software" data-order="3">
+        <figure class="project__figure">
+          <img src="images/EPL%20Match%20Predictor.png" alt="Output of the EPL match predictor" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Software</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/EPL-match-predictor" target="_blank" rel="noopener">EPL Match Predictor &ndash; Python<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">This project is an advanced machine learning project designed to predict the outcomes of English Premier League matches. The project encompasses a comprehensive web scraper that collects historical and future match data from the web, ensuring the model is trained on the most up-to-date information. Utilizing this data, this project leverages a Random Forest Classifier to determine whether a team will win, draw, or lose based on various match features. The model has been fine-tuned through hyperparameter optimization and addresses class imbalance through oversampling techniques.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/EPL-match-predictor" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Software" data-order="2">
+        <figure class="project__figure">
+          <img src="images/wordle%20solver.png" alt="Terminal output of the Wordle solver" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Software</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/wordle-solver" target="_blank" rel="noopener">Wordle Solver &ndash; Python<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">This project is a Python-based Wordle solver that uses information theory concepts such as entropy and probability to recommend the best possible guesses. This solver aims to efficiently solve Wordle puzzles by calculating the information gain of each guess and selecting the optimal word based on combined entropy and probability scores. The program performed an average of 3.6 guesses per word in a simulation of 1000 trials.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/wordle-solver" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project reveal" data-category="Software" data-order="1">
+        <figure class="project__figure">
+          <img src="images/website%20portfolio.png" alt="Screenshot of this portfolio website" loading="lazy" decoding="async">
+        </figure>
+        <div class="project__body">
+          <span class="tag">Software</span>
+          <h2 class="project__title">
+            <a href="https://github.com/titushyunkyu/tituslee-website" target="_blank" rel="noopener">Personal Portfolio Website &ndash; HTML / CSS / JS<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </h2>
+          <p class="project__desc">This project is my personal, professional portfolio website, which is the very website you are currently on. This website was created using HTML, CSS, and JavaScript. The server is hosted through GitHub, and the domain is registered and bought through Namecheap.</p>
+          <a class="project__link" href="https://github.com/titushyunkyu/tituslee-website" target="_blank" rel="noopener">View Repository <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <p class="empty" hidden>No projects match that filter.</p>
+  </div>
+
+</main>
+
+<!-- contact -->
+<footer class="footer" id="contact">
+  <div class="shell">
+    <div class="footer__grid">
+      <div class="reveal">
+        <h2>Contact</h2>
+        <p class="footer__lead">Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-list reveal">
+        <a href="mailto:titushyunkyu1@gmail.com">
+          <span class="k">Email</span>
+          <span class="v">titushyunkyu1@gmail.com</span>
+          <svg class="arrow" width="13" height="13" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="tel:+17039097009">
+          <span class="k">Phone</span>
+          <span class="v">+1 (703) 909-7009</span>
+          <svg class="arrow" width="13" height="13" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/titushyunkyu/" target="_blank" rel="noopener">
+          <span class="k">LinkedIn</span>
+          <span class="v">in/titushyunkyu</span>
+          <svg class="arrow" width="13" height="13" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <a href="https://github.com/titushyunkyu" target="_blank" rel="noopener">
+          <span class="k">GitHub</span>
+          <span class="v">titushyunkyu</span>
+          <svg class="arrow" width="13" height="13" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <div class="contact-row">
+          <span class="k">Social</span>
+          <span class="contact-row__icons">
+            <a href="https://www.facebook.com/profile.php?id=100012169932242" target="_blank" rel="noopener" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+            <a href="https://www.instagram.com/hyun_kyu.l2/" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="affiliations reveal">
+      <img class="logo-uva" src="images/uva%20two%20lines%20logo.png" alt="University of Virginia School of Engineering and Applied Science">
+      <img class="logo-csp" src="images/csp%20logo.png" alt="Clark Scholars Program">
+    </div>
+
+    <div class="colophon">
+      <span>&copy; <span data-year>2026</span> Titus Lee</span>
+      <span>Website made and designed by Titus Lee</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+<script src="portfolio.js" defer></script>
+</body>
+</html>

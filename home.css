@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Titus Lee — home.css   (hero, about, tabs)
+   ========================================================================== */
+
+/* ----------------------------------------------------------------- hero -- */
+
+.hero {
+  min-height: min(80vh, 700px);
+  display: flex;
+  align-items: center;
+  padding-block: clamp(4rem, 10vw, 8rem);
+  border-bottom: 1px solid var(--rule);
+}
+
+.hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+.hero__eyebrow::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  max-width: 240px;
+  background: var(--rule);
+}
+
+.hero h1 {
+  position: relative;
+  font-size: clamp(2.5rem, 6.6vw, 6.6rem);
+  font-weight: 700;
+  font-variation-settings: "wdth" 112;
+  line-height: .98;
+  letter-spacing: -.028em;
+  max-width: 19ch;
+}
+
+.hero h1 .name { color: var(--copper-ink); }
+
+.hero h1 .line2 {
+  display: block;
+  margin-top: .12em;
+  font-size: .68em;
+  font-weight: 600;
+  font-variation-settings: "wdth" 104;
+  color: var(--graphite);
+  letter-spacing: -.018em;
+}
+
+/* Typing effect.
+   A hidden ghost copy reserves the final layout box, and the live text is
+   overlaid on top of it — so the page never reflows while typing. */
+.type__ghost { visibility: hidden; }
+
+.type__live {
+  position: absolute;
+  inset: 0;
+}
+
+.caret {
+  display: inline-block;
+  width: .055em;
+  height: .82em;
+  margin-left: .06em;
+  vertical-align: baseline;
+  transform: translateY(.06em);
+  background: var(--copper);
+  animation: blink .75s step-end infinite;
+}
+.caret.is-done { animation: none; opacity: 0; transition: opacity .4s .3s; }
+
+@keyframes blink { 50% { opacity: 0; } }
+
+/* no JS, or reduced motion: the ghost simply becomes the headline */
+.no-type .type__ghost { visibility: visible; }
+.no-type .type__live { display: none; }
+
+.hero__actions {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+/* --------------------------------------------------------------- section -- */
+
+.section { padding-block: clamp(3.75rem, 8vw, 6.5rem); }
+
+/* ---------------------------------------------------------------- about -- */
+
+/* Intro band: portrait sits beside the short intro only.
+   Everything that grows over time lives full width below, so adding a
+   tenth job never leaves a stub of a photo column next to it. */
+.about__lede {
+  display: grid;
+  grid-template-columns: clamp(170px, 17vw, 215px) minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 3.25rem);
+  align-items: center;
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.about__figure { margin: 0; }
+
+.about__figure .frame {
+  border: 1px solid var(--rule);
+  padding: 7px;
+  background: var(--plate);
+}
+.about__figure img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.about__figure figcaption {
+  margin-top: .65rem;
+  font-family: var(--mono);
+  font-size: .645rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--graphite);
+}
+
+.about__intro {
+  color: var(--graphite);
+  max-width: 68ch;
+  font-size: clamp(1.05rem, 1.4vw, 1.38rem);
+  line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+  .about__lede {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: start;
+  }
+  .about__figure { max-width: 175px; }
+}
+
+/* ----------------------------------------------------------------- tabs -- */
+
+.tabs { margin-top: clamp(2rem, 4vw, 3rem); }
+
+.tabs__list { margin-bottom: clamp(1.5rem, 3vw, 2.25rem); }
+
+.tabs__panel[hidden] { display: none; }
+.tabs__panel { animation: panel-in .45s var(--ease); }
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .tabs__panel { animation: none; } }
+
+/* entries — full width, three columns on a wide screen */
+.entry {
+  display: grid;
+  grid-template-columns: 215px minmax(0, 2fr) minmax(0, 1.6fr);
+  gap: 0 clamp(1.5rem, 3vw, 3rem);
+  align-items: start;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+.entry:first-child { padding-top: 0; }
+.entry:last-child { border-bottom: 0; padding-bottom: 0; }
+
+.entry__when {
+  font-family: var(--mono);
+  font-size: .705rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--graphite);
+  padding-top: .3rem;
+}
+
+.entry__role {
+  font-family: var(--display);
+  font-weight: 600;
+  font-variation-settings: "wdth" 103;
+  font-size: 1.15rem;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+}
+
+.entry__org {
+  margin-top: .25rem;
+  font-size: .89rem;
+  font-weight: 500;
+  color: var(--copper-ink);
+}
+.entry__org .where { color: var(--graphite); font-weight: 400; }
+
+.entry__note {
+  font-size: .955rem;
+  color: var(--graphite);
+  max-width: 62ch;
+  padding-top: .2rem;
+}
+
+/* skills rows have no third column, so let the chips run wide */
+.entry--wide { grid-template-columns: 215px minmax(0, 1fr); }
+
+.entry__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  padding-top: .15rem;
+}
+
+@media (max-width: 1080px) {
+  .entry, .entry--wide { grid-template-columns: 190px minmax(0, 1fr); }
+  .entry__note { margin-top: .55rem; padding-top: 0; grid-column: 2; }
+}
+
+@media (max-width: 640px) {
+  .entry, .entry--wide { grid-template-columns: 1fr; gap: .4rem; }
+  .entry__when { padding-top: 0; order: -1; }
+  .entry__note { grid-column: 1; }
+}
