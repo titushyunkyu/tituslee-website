@@ -6,8 +6,8 @@
 
 
 :root {
-  --paper:      #edebe2;
-  --plate:      #f1f1e9;
+  --paper:      #eeebe3;
+  --plate:      #F3F3EF;
   --inset:      #DCDCD5;
   --rule:       #c7c1c0;
   --rule-soft:  #D5D6CF;
@@ -33,7 +33,7 @@
 }
 
 [data-theme="dark"] {
-  --paper:      #1c1d1d;
+  --paper:      #131414;
   --plate:      #1B1D1D;
   --inset:      #242726;
   --rule:       #323634;
